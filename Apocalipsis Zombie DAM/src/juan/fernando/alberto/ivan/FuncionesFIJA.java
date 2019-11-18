@@ -10,8 +10,8 @@ import java.util.Scanner;
 /**
  * Esta clase describirá los atributos y el nombre de nuestro personaje
  *
- * @author ivang
- * @author fparra
+ * @author ivan
+ * @author fernando
  * @author juan
  * @author alberto
  */
@@ -24,10 +24,8 @@ public class FuncionesFIJA {
     public static byte percepcion = 30; //Percepción 0-100 del jugador
 
     /**
-     * A FUNCIÓN RECOGE LAS VARIABLES VELOCIDAD, FUERZA, INTUICION Y PERCEPCION,
-     * Y DEVUELVE VERDADERO EN CASO DE QUE SEA EQUIVALENTE A 200, EN CASO
-     * CONTRARIO, DEVUELVE FALSO
-     *
+     * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y PERCEPCION
+     * DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 SINO, DEVUELVE FALSO 
      * @param velocidad
      * @param fuerza
      * @param intuicion
@@ -37,6 +35,7 @@ public class FuncionesFIJA {
     public static boolean sumar200(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
         //SI TODOS LOS PARAMETROS SON IGUALES A 200, LA FUNCIÓN DEVOLVERÁ TRUE
         return (velocidad + fuerza + intuicion + percepcion == 200 ? true : false); 
+    
 
     }
 }
