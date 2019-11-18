@@ -27,12 +27,13 @@ public class ApocalipsisZombieDAM {
         
         
         
-          System.out.println(FuncionesAJEA.nombre);
+        System.out.println(FuncionesAJEA.nombre);
         System.out.println(FuncionesFIJA.nombre);
         System.out.println(FuncionesFCMJ.nombre);
         System.out.println("Más Cerebros");
         System.out.println(FuncionesAJAA.intuición);
         System.out.println(FuncionesHSRK.nombre);
+        System.out.println("Juan eres un maquina");
 
     }
     
