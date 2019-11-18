@@ -17,5 +17,5 @@ public class FuncionesFIJA {
     public static byte velocidad=50; //Velocidad 0-100 del jugador
     public static byte fuerza=90;  //Fuerza 0-100 del jugador
     public static byte intuicion=30; //Intuición 0-100 del jugador
-    public static byte percepcion=30; //Percepcion0-100 del jugador
+    public static byte percepcion=30; //Percepción 0-100 del jugador
 }
