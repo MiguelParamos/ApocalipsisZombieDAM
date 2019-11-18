@@ -10,5 +10,9 @@ package francisco.cristina.maria.jaime;
  * @author cenec
  */
 public class FuncionesFCMJ {
-    
+    public static String nombre="Heusequio";
+            public static byte fuerza=60;
+            public static byte velocidad=70;
+            public static byte percepcion=40;
+            public static byte intuicion=30;
 }
