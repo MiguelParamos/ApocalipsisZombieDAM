@@ -6,7 +6,7 @@
 package juan.fernando.alberto.ivan;
 
 /**
- *  Esta función describirá los atributos y el nombre de nuestro personaje
+ * Esta función describirá los atributos y el nombre de nuestro personaje
  * @author ivang
  * @author fparra
  * @author juan
