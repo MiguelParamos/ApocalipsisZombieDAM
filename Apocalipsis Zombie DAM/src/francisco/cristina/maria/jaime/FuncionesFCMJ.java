@@ -6,7 +6,7 @@
 package francisco.cristina.maria.jaime;
 
 /**
- *
+ *Esta clase define los atributos de los personajes
  * @author Jaime 
  * @author Cristina
  * @author María
