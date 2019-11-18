@@ -19,5 +19,11 @@ public class FuncionesHSRK {
     public static byte intuicion=30;//Intuicion del jugador 0-100
     public static byte percepcion=30;//Percepcion del jugador 0-100
     
-    
+    public static boolean comprobarCoherencia(byte velocidad,byte fuerza,byte intuicion,byte percepcion){
+        boolean comprobar = false;
+        if (velocidad+fuerza+intuicion+percepcion == 200) {
+            comprobar = true;
+        }
+        return comprobar;
+    }
 }
