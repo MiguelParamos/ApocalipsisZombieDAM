@@ -6,6 +6,7 @@
 package apocalipsis.zombie.dam;
 
 import francisco.cristina.maria.jaime.FuncionesFCMJ;
+import rafa.kevin.salva.hugo.FuncionesHSRK;
 
 /**
  *
@@ -19,6 +20,7 @@ public class ApocalipsisZombieDAM {
     public static void main(String[] args) {
         System.out.println("Cereeeebrooos!");
         System.out.println(FuncionesFCMJ.nombre);
+        System.out.println(FuncionesHSRK.nombre);
     }
     
 }
