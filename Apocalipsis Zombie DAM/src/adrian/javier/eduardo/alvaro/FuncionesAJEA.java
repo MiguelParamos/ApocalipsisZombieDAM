@@ -7,7 +7,10 @@ package adrian.javier.eduardo.alvaro;
 
 /**
  *Aqui se definen los puntos repartidos al personaje.
- * @author adrian,javier,eduardo,alvaro
+ * @author adrian
+ * @author javier
+ * @author eduardo
+ * @author alvaro
  */
 public class FuncionesAJEA {
     
