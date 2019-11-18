@@ -19,13 +19,9 @@ public class ApocalipsisZombieDAM {
      */
     public static void main(String[] args) {
         System.out.println("Cereeeebrooos!");
-<<<<<<< HEAD
-        
-        
-=======
         System.out.println(FuncionesAJAA.intuición);
         System.out.println(FuncionesHSRK.nombre);
->>>>>>> 00e20743d4f2a3a1836634fa4567b38cab0dde14
+
     }
     
 }
