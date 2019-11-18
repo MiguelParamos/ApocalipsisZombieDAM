@@ -6,6 +6,7 @@
 package apocalipsis.zombie.dam;
 
 import adrian.javier.eduardo.alvaro.FuncionesAJEA;
+import rafa.kevin.salva.hugo.FuncionesHSRK;
 
 /**
  *
@@ -22,6 +23,7 @@ public class ApocalipsisZombieDAM {
         
         
           System.out.println(FuncionesAJEA.nombre);
+        System.out.println(FuncionesHSRK.nombre);
     }
     
 }
