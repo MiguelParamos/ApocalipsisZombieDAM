@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,6 +7,7 @@
 package apocalipsis.zombie.dam;
 
 import adrian.javier.eduardo.alvaro.FuncionesAJEA;
+import antonio.javi.alvarolo.alvaroto.FuncionesAJAA;
 import rafa.kevin.salva.hugo.FuncionesHSRK;
 
 /**
@@ -20,6 +22,7 @@ public class ApocalipsisZombieDAM {
     public static void main(String[] args) {
         System.out.println("Cereeeebrooos!");
         System.out.println("Más Cerebros");
+        System.out.println(FuncionesAJAA.intuición);
         System.out.println(FuncionesHSRK.nombre);
     }
     
