@@ -5,6 +5,8 @@
  */
 package apocalipsis.zombie.dam;
 
+import juan.fernando.alberto.ivan.FuncionesFIJA;
+
 /**
  *
  * @author Ccenec
@@ -16,6 +18,7 @@ public class ApocalipsisZombieDAM {
      */
     public static void main(String[] args) {
         System.out.println("Cereeeebrooos!");
+        System.out.println(FuncionesFIJA.nombre);
     }
     
 }
