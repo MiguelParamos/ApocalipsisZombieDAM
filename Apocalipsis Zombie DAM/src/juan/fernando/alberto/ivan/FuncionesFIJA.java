@@ -6,7 +6,7 @@
 package juan.fernando.alberto.ivan;
 
 /**
- * Esta función describirá los atributos y el nombre de nuestro personaje
+ * Esta clase describirá los atributos y el nombre de nuestro personaje
  * @author ivang
  * @author fparra
  * @author juan
@@ -15,7 +15,7 @@ package juan.fernando.alberto.ivan;
 public class FuncionesFIJA {
     public static String nombre="Luis Alberto"; //Nombre del Jugador
     public static byte velocidad=50; //Velocidad 0-100 del jugador
-    public static byte fuerza=90;  //Idem Fuerza
-    public static byte intuicion=30; //Idem Intuicion
-    public static byte percepcion=30; //Idem Percepcion
+    public static byte fuerza=90;  //Fuerza 0-100 del jugador
+    public static byte intuicion=30; //Intuición 0-100 del jugador
+    public static byte percepcion=30; //Percepcion0-100 del jugador
 }
