@@ -22,21 +22,21 @@ public class FuncionesFIJA {
     public static byte fuerza = 90;  //Fuerza 0-100 del jugador
     public static byte intuicion = 30; //Intuición 0-100 del jugador
     public static byte percepcion = 30; //Percepción 0-100 del jugador
-    
+
     /**
-     * A FUNCIÓN RECOGE LAS VARIABLES VELOCIDAD, FUERZA, INTUICION Y PERCEPCION, Y DEVUELVE VERDADERO EN CASO DE QUE 
-       SEA EQUIVALENTE A 200, EN CASO CONTRARIO, DEVUELVE FALSO 
+     * A FUNCIÓN RECOGE LAS VARIABLES VELOCIDAD, FUERZA, INTUICION Y PERCEPCION,
+     * Y DEVUELVE VERDADERO EN CASO DE QUE SEA EQUIVALENTE A 200, EN CASO
+     * CONTRARIO, DEVUELVE FALSO
+     *
      * @param velocidad
      * @param fuerza
      * @param intuicion
      * @param percepcion
-     * @return 
+     * @return
      */
-    public static boolean sumar200(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) { 
-        boolean ej = true;
-        if (velocidad + fuerza + intuicion + percepcion == 200) { //SI TODOS LOS PARAMETROS SUMAN 200, CUMPLE LAS CONDICIONES   
-        }
-        return ej;
+    public static boolean sumar200(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
+        //SI TODOS LOS PARAMETROS SON IGUALES A 200, LA FUNCIÓN DEVOLVERÁ TRUE
+        return (velocidad + fuerza + intuicion + percepcion == 200 ? true : false); 
 
     }
 }
