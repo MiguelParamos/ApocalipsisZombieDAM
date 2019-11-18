@@ -7,12 +7,15 @@ package francisco.cristina.maria.jaime;
 
 /**
  *
- * @author Jaime María Cristina Francisco
+ * @author Jaime 
+ * @author Cristina
+ * @author María
+ * @author Francisco
  */
 public class FuncionesFCMJ {
     public static String nombre="Heusequio";//nombre del jugador
             public static byte fuerza=60;//Fuerza 0-100 del jugador
-            public static byte velocidad=70;//Velocidad
+            public static byte velocidad=70;//Velocidad 0-100 del jugador
             public static byte percepcion=40;//Percepción 0-100 del jugador
             public static byte intuicion=30;//Intuicción 0-100 del jugador
 }
