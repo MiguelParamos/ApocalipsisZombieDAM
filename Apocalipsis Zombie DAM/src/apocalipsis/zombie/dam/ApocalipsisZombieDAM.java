@@ -5,6 +5,8 @@
  */
 package apocalipsis.zombie.dam;
 
+import adrian.javier.eduardo.alvaro.FuncionesAJEA;
+
 /**
  *
  * @author Ccenec
@@ -16,6 +18,8 @@ public class ApocalipsisZombieDAM {
      */
     public static void main(String[] args) {
         System.out.println("Cereeeebrooos!");
+      
+        System.out.println(FuncionesAJEA.nombre);
     }
     
 }
