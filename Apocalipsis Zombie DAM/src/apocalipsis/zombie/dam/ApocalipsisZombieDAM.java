@@ -14,26 +14,32 @@ import antonio.javi.alvarolo.alvaroto.FuncionesAJAA;
 import rafa.kevin.salva.hugo.FuncionesHSRK;
 
 /**
- *
- * @author Ccenec
+ * Programa que simula el apocalipsis zombie en Cenec
+ * @author Miguel Páramos
  */
 public class ApocalipsisZombieDAM {
 
     /**
+     * Función principal, donde se simula el apocalipsis
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Cereeeebrooos!");
+        byte turno=1;
+        String historia="";
         
         
-        
-        System.out.println(FuncionesAJEA.nombre);
-        System.out.println(FuncionesFIJA.nombre);
-        System.out.println(FuncionesFCMJ.nombre);
-        System.out.println("Más Cerebros");
-        System.out.println(FuncionesAJAA.intuición);
-        System.out.println(FuncionesHSRK.nombre);
-
+        System.out.println(imprimirTurno(turno,historia));
     }
+    
+    /**
+     * función que imprime la información del turno
+     * prerrequisito: Turno debe ser positivo mayor a cero
+     * @param turno número de turno desde 1
+     * @param historia String con la historia hasta el momento
+     * @return String con el formato de impresión
+     */
+    public static String imprimirTurno(byte turno,String historia){
+            return "|--------------------------|\n|---------Turno "+turno+"----------|\n"+historia+"\n\n";            
+    } 
     
 }
