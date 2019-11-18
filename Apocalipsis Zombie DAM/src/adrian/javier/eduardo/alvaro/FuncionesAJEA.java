@@ -20,7 +20,14 @@ public class FuncionesAJEA {
     public static byte fuerza = 80;//fuerza 0-100 jugador
     public static byte intuicion = 40;//intuicion 0-100 jugador
     public static byte percepcion = 20;//percepcion 0-100 jugador
-
+/**
+ * Esta funcion comprueba que el personaje tiene bien repartido los puntos
+ * @param velocidad 0-100 jugador
+ * @param fuerza 0-100 jugador
+ * @param intuicion 0-100 jugador
+ * @param percepcion 0-100 jugador
+ * @return Devuelve true si es correcto o false, en funcion de sis esta bien o no repertido los puntos
+ */
     public static boolean comprobarCoherencia(byte velocidad, byte fuerza, byte intuicion, byte percepcion) {
 
         int total = velocidad + fuerza + intuicion + percepcion;
