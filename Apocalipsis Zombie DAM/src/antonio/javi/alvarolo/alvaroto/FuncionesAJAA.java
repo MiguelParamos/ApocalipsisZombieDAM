@@ -7,11 +7,14 @@ package antonio.javi.alvarolo.alvaroto;
 
 /**
  *
- * @author mikim
+ * @author Alvaro Torres
+ * @author Javier R
+ * @author Alvaro Lopez
+ * @author Antonio Calvente
  */
 public class FuncionesAJAA {
 
-    public static String nombre = "Aitor Tilla";
+    public static String nombre = "Aitor Tilla";// Nombre del jugador
     public static byte velocidad =75 ;
     public static byte fuerza =25 ;
     public static byte intuición =25 ;

@@ -6,14 +6,14 @@
 package adrian.javier.eduardo.alvaro;
 
 /**
- *
- * @author cenec
+ *Aqui se definen los puntos repartidos al personaje.
+ * @author adrian,javier,eduardo,alvaro
  */
 public class FuncionesAJEA {
     
-    public static String nombre="AJEA";
-    public static byte velocidad=60;
-    public static byte fuerza=80;
-    public static byte intuicion =40;
-    public static byte percepcion=20;
+    public static String nombre="AJEA";//Nombre del personaje
+    public static byte velocidad=60;//velocidad 0-100 jugador
+    public static byte fuerza=80;//fuerza 0-100 jugador
+    public static byte intuicion =40;//intuicion 0-100 jugador
+    public static byte percepcion=20;//percepcion 0-100 jugador
 }
