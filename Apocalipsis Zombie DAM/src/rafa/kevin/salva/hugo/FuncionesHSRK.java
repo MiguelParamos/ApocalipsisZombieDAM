@@ -6,18 +6,18 @@
 package rafa.kevin.salva.hugo;
 
 /**
- *
+ *  En esta clase se define los puntos repartidos de nuestro personaje que se llama Abascal
  * @author Salva
  * @author Rafa
  * @author Hugo
  * @author Kevin
  */
 public class FuncionesHSRK {
-    public static String nombre = "Abascal";//Nombre del jugador
-    public static byte velocidad=70;//Velocidad del jugador
-    public static byte fuerza=70;//Fuerza del jugador
-    public static byte intuicion=30;//Intuicion del jugador
-    public static byte percepcion=30;//Percepcion del jugador
+    public static String nombre = "Abascal";//Nombre del jugador 0-100
+    public static byte velocidad=70;//Velocidad del jugador 0-100
+    public static byte fuerza=70;//Fuerza del jugador 0-100
+    public static byte intuicion=30;//Intuicion del jugador 0-100
+    public static byte percepcion=30;//Percepcion del jugador 0-100
     
     
 }
