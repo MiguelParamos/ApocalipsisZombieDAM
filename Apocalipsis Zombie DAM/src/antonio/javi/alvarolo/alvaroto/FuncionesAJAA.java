@@ -39,7 +39,13 @@ public class FuncionesAJAA {
         return suma;
     }
 
-
+/**
+ * Funcion que devuelve un string segun el valor de la percepcion
+ * @param turno numero del turno del personaje
+ * @param accion comprobar lo que hace el personaje
+ * @param percepcion valor que denota la la percepcion del personaje
+ * @return devuelve el string de la accion.
+ */
     public static String accionReaccion(byte turno, String accion, byte percepcion){
         if(turno==1){
         if(accion.equalsIgnoreCase("mirar por la ventana")){
@@ -47,7 +53,7 @@ public class FuncionesAJAA {
             if (percepcion < 50){
                 return "No veo nada raro";
             }
-            if(percepcion >= 50 && percepción < 80){
+            if(percepcion >= 50 && percepcion < 80){
                 return "Veo alboroto en general";
             }
             if( percepcion >= 80){
