@@ -44,13 +44,12 @@ public class FuncionesFIJA {
      * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 
      * PRErequisito: La velocidad debe de estar entre 0 y 100 
      * POSTrequisito: La velocidad máxima va a ser 8 metros
-     * @param velocidad
-     * @return v1
+     * @param velocidad equivalente a la velocidad de nuestro zombie
+     * @return v1, resultado de la regla de 3
      */
     public static Byte desplazamiento(Byte velocidad) {
         byte v1;
         v1 = (byte) ((velocidad * 8) / 100);
         return v1;
     }
-
 }
