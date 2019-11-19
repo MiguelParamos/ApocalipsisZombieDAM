@@ -68,7 +68,7 @@ public class FuncionesFCMJ {
             }
         }else if (turno==3){
             if (accion.equals("amenazar a Aitor Tilla")){
-                return "";
+                return "aceptan la proposicion";
             }
         }
         return "";
