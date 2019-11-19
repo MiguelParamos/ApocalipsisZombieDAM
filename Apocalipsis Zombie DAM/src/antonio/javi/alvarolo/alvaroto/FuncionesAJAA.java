@@ -64,13 +64,23 @@ public class FuncionesAJAA {
       }
     return "";
     }
+    /**
+     * Funcion del personaje en turnos 2 y 3
+     * @param turno numero del turno del personaje
+     * @param accion comprobar lo que hace el personaje
+     * @return String de la accion
+     */
     public static String accionReaccion(byte turno, String accion){
         if (turno==2&& accion.equalsIgnoreCase("cierro la ventana")){
             return "cierro la ventana";
         }
+        if (turno==3 && accion.equalsIgnoreCase("me amenazan para unirme")){
+            return "Aitor Tilla se une al grupo, con la condicion de no ser traicionado";
+        }
         return "";
     }
 }
+   
     
         
    
