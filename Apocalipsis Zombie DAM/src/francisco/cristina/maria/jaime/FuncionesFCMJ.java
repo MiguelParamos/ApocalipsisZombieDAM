@@ -23,7 +23,7 @@ public class FuncionesFCMJ {
 
     /**
      * Función que comprueba si la suma total de los atributos es 200.
-     * @param velocidad
+     * @param velocidad esta es la velocidad entre 0 y 100
      * @param fuerza
      * @param intuicion
      * @param percepcion

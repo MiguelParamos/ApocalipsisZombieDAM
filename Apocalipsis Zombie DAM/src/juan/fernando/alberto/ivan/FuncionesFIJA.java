@@ -32,7 +32,7 @@ public class FuncionesFIJA {
      * @param percepcion
      * @return
      */
-    public static boolean sumar200(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
+    public static boolean comprobarCoherencia(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
         //SI TODOS LOS PARAMETROS SON IGUALES A 200, LA FUNCIÓN DEVOLVERÁ TRUE
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false); 
     
