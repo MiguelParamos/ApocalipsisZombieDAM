@@ -34,6 +34,20 @@ public class FuncionesFIJA {
      */
     public static boolean comprobarCoherencia(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
         //Si todos los parametros son equivalentes a 200, devolverá verdadero, en caso contrario, falso
-        return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false); 
+        return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false);
     }
-}
+    
+   /**
+    * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 
+    * @param velocidad
+    * @return v1
+    */
+    public static Byte desplazamiento (Byte velocidad){
+       byte v1;
+       v1=(byte) ((velocidad*8)/100);
+      return v1;
+    }
+    
+    
+ }
+
