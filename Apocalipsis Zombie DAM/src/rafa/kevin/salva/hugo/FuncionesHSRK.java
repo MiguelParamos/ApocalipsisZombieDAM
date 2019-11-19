@@ -23,10 +23,10 @@ public class FuncionesHSRK {
      * Esta función comprueba si la suma de los cuatro parámetros es
      * igual a 200 y devuelve un boolean al respecto.
      * 
-     * @param velocidad
-     * @param fuerza
-     * @param intuicion
-     * @param percepcion
+     * @param velocidad es la velocidad que tiene el personaje de 0-100
+     * @param fuerza es la fuerza que tiene el personaje de 0-100
+     * @param intuicion es la intuicion que tiene el personaje de 0-100
+     * @param percepcion es la percepcion que tiene el personaje de 0-100
      * @return Devuelve un boolean verdadero si suman 200, falso si no.
      */
     public static boolean comprobarCoherencia(byte velocidad,byte fuerza,byte intuicion,byte percepcion){
