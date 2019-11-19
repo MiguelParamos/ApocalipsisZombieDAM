@@ -45,7 +45,7 @@ public class ApocalipsisZombieDAM {
         
         //TURNO 2
         turno++;
-        historia="Se escuchan muchos gritos desde la calle.\n Aitor Tilla se da cuenta de que vienen desde la derecha.\n";
+        historia="Se escuchan muchos gritos desde la calle.\n Aitor Tilla se da cuenta de que vienen desde la derecha.\n-----------------------\n";
         historia+=FuncionesAJEA.nombre+": Sigue corriendo para abajo. recorren "+FuncionesAJEA.desplazamiento(FuncionesAJEA.velocidad)+" metros. Estás a la altura de secretaría\n";
         historia+=FuncionesFIJA.nombre+": Sigue corriendo para abajo. recorren "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros. Estás a la altura de secretaría\n";
         historia+=FuncionesAJAA.nombre+": Cierra la ventana. "+FuncionesAJAA.accionReaccion(turno,"cierro la ventana")+"\n";
@@ -56,7 +56,14 @@ public class ApocalipsisZombieDAM {
         
         //TURNO 3
         turno++; 
-        historia="AJEA y Luis alberto ven a Natalia salir corriendo para arriba.\n Ven mucho alboroto en la calle. \n Los que están en el aula 5, ven como Natalia entra y les dice \n que todo el mundo fuera, que pasa algo malo en la calle, \n parece que hay un loco suelto.\n";
+        historia="AJEA y Luis alberto ven a Natalia salir corriendo para arriba.\n Ven mucho alboroto en la calle. \n Los que están en el aula 5, ven como Natalia entra y les dice \n que todo el mundo fuera, que pasa algo malo en la calle, \n parece que hay un loco suelto.\n-----------------------\n";
+        historia+=FuncionesFCMJ.nombre+": Amenazan a Aitor Tilla para que colabore con ellos. "+FuncionesFCMJ.accionReaccion(turno,"amenazar a Aitor Tilla")+"\n";
+        historia+=FuncionesHSRK.nombre+": Amenazan a Aitor Tilla para que colabore con ellos. "+FuncionesHSRK.accionReaccion(turno,"amenazar a Aitor Tilla")+"\n";
+        historia+=FuncionesAJEA.nombre+": Intenta meterse en secretaría. "+FuncionesAJEA.accionReaccion(turno,"meterse en secretaria")+"\n";
+        historia+=FuncionesFIJA.nombre+": Cogen piedras de secretaría. "+FuncionesFIJA.recoger("piedras")+"\n";
+        historia+=FuncionesAJAA.nombre+": Reciben amenazas para unise a grupo. "+FuncionesAJAA.accionReaccion(turno,"me amenazan para unirme")+"\n";
+        
+
         System.out.println(imprimirTurno(turno,historia));
         
     }
