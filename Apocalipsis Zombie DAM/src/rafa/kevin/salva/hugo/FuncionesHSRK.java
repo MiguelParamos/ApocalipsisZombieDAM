@@ -66,7 +66,12 @@ public class FuncionesHSRK {
             if (accion.equals ("preguntar que esta pasando")){
                 return "nadie dice nada";
             }
+        }else if (turno == 3){
+            if (accion.equals ("amenazar a Aitor Tilla")){
+                return "Aceptamos la coalición";
+            }
         }
+        
         return null;
            
     }
