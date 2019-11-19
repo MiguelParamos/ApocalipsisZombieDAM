@@ -25,7 +25,6 @@ public class FuncionesAJEA {
 
         int total = velocidad + fuerza + intuicion + percepcion;
         if (total == 200) {
-
             return true;
         } else {
            return false;
