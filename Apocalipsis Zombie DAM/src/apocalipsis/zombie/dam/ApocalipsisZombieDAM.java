@@ -44,7 +44,13 @@ public class ApocalipsisZombieDAM {
         
         turno++;
         historia="Se escuchan muchos gritos desde la calle.\n Aitor Tilla se da cuenta de que vienen desde la derecha.";
+        historia+=FuncionesAJEA.nombre+": Sigue corriendo para abajo. recorren "+FuncionesAJEA.desplazamiento(FuncionesAJEA.velocidad)+" metros. Estás a la altura de secretaría\n";
+        historia+=FuncionesFIJA.nombre+": Sigue corriendo para abajo. recorren "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros. Estás a la altura de secretaría\n";
+        historia+=FuncionesAJAA.nombre+": "+accionReaccion(turno,"cierro la ventana")+"\n";
+        historia+=FuncionesFCMJ.nombre+": "+accionReaccion(turno,"pregunto a Aitor Tilla violentamente por qué cierran la ventana")+"\n";
+        historia+=FuncionesHSRK.nombre+": "+accionReaccion(turno,"preguntar que esta pasando")+"\n";
         System.out.println(imprimirTurno(turno,historia));
+        
     }
     
     /**
@@ -56,6 +62,8 @@ public class ApocalipsisZombieDAM {
      */
     public static String imprimirTurno(byte turno,String historia){
             return "|--------------------------|\n|---------Turno "+turno+"----------|\n"+historia+"\n\n";            
+    
+    
     } 
     
 }
