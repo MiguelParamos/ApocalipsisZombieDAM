@@ -5,10 +5,12 @@
  */
 package antonio.javi.alvarolo.alvaroto;
 
+import java.util.Scanner;
+
 /**
  *Clase que describe las cualidades de un personaje
  * @author Alvaro Torres
- * @author Javier R
+ * @author Javier Ruiz
  * @author Alvaro Lopez
  * @author Antonio Calvente
  */
@@ -36,6 +38,31 @@ public class FuncionesAJAA {
         }
         return suma;
     }
+/**
+ * Funcion se asoma por la ventana
+ * @param turno numero de turno del jugador
+ * @param accion comprobacion de lo que hace el personaje
+ * @return 
+ */
 
+    public static String accioReaccion(byte turno, String accion){
+        Scanner sc=new Scanner(System.in); 
+        String accion=sc.nextLine();
+        if(turno==1){
+        switch(accion.equalsIgnoreCase("Mirar por la ventana")){
+            case FuncionesAJAA.percepción < 50:
+                System.out.println("No veo nada raro");
+                break;
+            case FuncionesAJAA.percepción >= 50 && FuncionesAJAA.percepción < 80:
+                System.out.println("Veo alboroto en general");
+                break;
+            case FuncionesAJAA.percepción >= 80:
+                System.out.println("veo gente corriendo en la plaza de la derecha");
+                break;
+            return "";
+        }
+        
+        
+   
     
-}
+           
