@@ -43,6 +43,14 @@ public class FuncionesAJEA {
      */
     public static byte desplazamiento(byte velocidad) {
     return (byte)((velocidad*8)/100);
-        
+ 
     }
-}
+    
+    public static String accionReaccion(byte turno, String accion) {
+        if (turno == 3) {
+            if (accion.equals("intentan entrar en secretaria")) {
+                    return "No puedo entrar. Está cerrado";
+             
+        }
+        }
+
