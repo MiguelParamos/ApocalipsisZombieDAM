@@ -38,30 +38,28 @@ public class FuncionesAJAA {
         }
         return suma;
     }
-/**
- * Funcion se asoma por la ventana
- * @param turno numero de turno del jugador
- * @param accion comprobacion de lo que hace el personaje
- * @return 
- */
 
-    public static String accioReaccion(byte turno, String accion){
-        Scanner sc=new Scanner(System.in); 
-        String accion=sc.nextLine();
+
+    public static String accionReaccion(byte turno, String accion, byte percepcion){
         if(turno==1){
-        switch(accion.equalsIgnoreCase("Mirar por la ventana")){
-            case FuncionesAJAA.percepción < 50:
+        if(accion.equalsIgnoreCase("Mirar por la ventana")){
+            
+            if (percepción < 50){
                 System.out.println("No veo nada raro");
-                break;
-            case FuncionesAJAA.percepción >= 50 && FuncionesAJAA.percepción < 80:
+            }
+            if(percepción >= 50 && percepción < 80){
                 System.out.println("Veo alboroto en general");
-                break;
-            case FuncionesAJAA.percepción >= 80:
+            }
+            if( percepción >= 80){
                 System.out.println("veo gente corriendo en la plaza de la derecha");
-                break;
-            return "";
+            }
+            
         }
-        
+      }
+    return "";
+    }
+}
+    
         
    
     
