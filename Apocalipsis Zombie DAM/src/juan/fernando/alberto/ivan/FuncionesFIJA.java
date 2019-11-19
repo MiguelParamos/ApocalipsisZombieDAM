@@ -24,8 +24,10 @@ public class FuncionesFIJA {
     public static byte percepcion = 30; //Percepción 0-100 del jugador
 
     /**
-     * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y PERCEPCION
-     * DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 SINO, DEVUELVE FALSO 
+     * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y
+     * PERCEPCION DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 SINO,
+     * DEVUELVE FALSO
+     *
      * @param velocidad indica la velocidad del jugador
      * @param fuerza indica la fuerza del jugador
      * @param intuicion indica la intuicion del jugador
@@ -36,20 +38,19 @@ public class FuncionesFIJA {
         //Si todos los parametros son equivalentes a 200, devolverá verdadero, en caso contrario, falso
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false);
     }
-    
-   /**
-    * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 
-    * PRErequisito: La velocidad debe de estar entre 0 y 100
-    * @param velocidad
-    * @return v1
-    * POSTrequisito: La velocidad máxima va a ser 8 metros
-    */
-    public static Byte desplazamiento (Byte velocidad){
-       byte v1;
-       v1=(byte) ((velocidad*8)/100);
-      return v1;
-    }
-    
-    
- }
 
+    /**
+     * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
+     * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 
+     * PRErequisito: La velocidad debe de estar entre 0 y 100 
+     * POSTrequisito: La velocidad máxima va a ser 8 metros
+     * @param velocidad
+     * @return v1
+     */
+    public static Byte desplazamiento(Byte velocidad) {
+        byte v1;
+        v1 = (byte) ((velocidad * 8) / 100);
+        return v1;
+    }
+
+}
