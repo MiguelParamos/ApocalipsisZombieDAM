@@ -64,6 +64,12 @@ public class FuncionesAJAA {
       }
     return "";
     }
+    public static String accionReaccion(byte turno, String accion){
+        if (turno==2&& accion.equalsIgnoreCase("mirar por la ventana")){
+            
+            
+        }return "cierro la ventana";
+    }
 }
     
         
