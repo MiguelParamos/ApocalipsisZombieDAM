@@ -35,5 +35,28 @@ public class FuncionesFCMJ {
         }
         return false;
     }
-
+    
+    /**
+     * Función que recoge las acciones del turno 1, si te asomas a la ventana.
+     * @param turno Turno en el que te encuentras
+     * @param accion Acción que realizas
+     * @return De vuelve un String en función de tu percepción.
+     */
+    
+    public static String accionReaccion(byte turno, String accion){
+        if (turno==1) {
+            if (accion.equals("mirar por la ventana")) {
+                if (percepcion<50) {
+                    return "no veo nada raro";
+                }
+                else if (percepcion>=50&&percepcion<80) {
+                    return "veo alboroto en general";
+                }
+                else  {
+                    return "veo gente corriendo en la plaza de la derecha";
+                }
+            }
+        }
+        return "";
+    }
 }

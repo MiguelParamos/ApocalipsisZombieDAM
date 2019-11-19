@@ -28,12 +28,21 @@ public class FuncionesAJEA {
      * @param fuerza 0-100 jugador
      * @param intuicion 0-100 jugador
      * @param percepcion 0-100 jugador
-     * @return Devuelve true si es correcto o false, en funcion de sis esta bien
+     * @return Devuelve true si es correcto o false, en funcion de si esta bien
      * o no repertido los puntos
      */
     public static boolean comprobarCoherencia(byte velocidad, byte fuerza, byte intuicion, byte percepcion) {
 
         return (velocidad + fuerza + intuicion + percepcion == 200);
 
+    }
+    /**
+     * Hace una regla de tres para averiguar la distancia recorrida por  el personaje.
+     * @param velocidad La velocidad que tiene el personaje.
+     * @return Devuelve la distancia recorrida.
+     */
+    public static byte desplazamiento(byte velocidad) {
+    return (byte)((velocidad*8)/100);
+        
     }
 }
