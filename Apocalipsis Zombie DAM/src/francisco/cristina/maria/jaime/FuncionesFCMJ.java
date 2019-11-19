@@ -23,10 +23,10 @@ public class FuncionesFCMJ {
 
     /**
      * Función que comprueba si la suma total de los atributos es 200.
-     * @param velocidad esta es la velocidad entre 0 y 100
-     * @param fuerza
-     * @param intuicion
-     * @param percepcion
+     * @param velocidad esta es la velocidad del personaje entre 0 y 100.
+     * @param fuerza esta es la fuerza del personaje entre 0 y 100.
+     * @param intuicion esta es la intuicion del personaje entre 0 y 100.
+     * @param percepcion esta es la percepcion del personaje entre 0 y 100.
      * @return  Devuelve true en caso de que la suma sea 200 y false si no lo es.
      */
     public static boolean comprobarCoherencia(byte velocidad, byte fuerza, byte intuicion, byte percepcion) {
