@@ -53,7 +53,7 @@ public class FuncionesAJAA {
             if (percepcion < 50){
                 return "No veo nada raro";
             }
-            if(percepcion >= 50 && percepción < 80){
+            if(percepcion >= 50 && percepcion < 80){
                 return "Veo alboroto en general";
             }
             if( percepcion >= 80){
