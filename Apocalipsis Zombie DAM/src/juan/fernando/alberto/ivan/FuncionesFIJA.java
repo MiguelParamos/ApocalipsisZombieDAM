@@ -41,9 +41,10 @@ public class FuncionesFIJA {
 
     /**
      * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
-     * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 
-     * PRErequisito: La velocidad debe de estar entre 0 y 100 
-     * POSTrequisito: La velocidad máxima va a ser 8 metros
+     * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PRErequisito: La
+     * velocidad debe de estar entre 0 y 100 POSTrequisito: La velocidad máxima
+     * va a ser 8 metros
+     *
      * @param velocidad equivalente a la velocidad de nuestro zombie
      * @return v1, resultado de la regla de 3
      */
@@ -52,4 +53,42 @@ public class FuncionesFIJA {
         v1 = (byte) ((velocidad * 8) / 100);
         return v1;
     }
-}
+
+    public static String recoger(String objeto, int fuerza) {
+        String obj = "Piedras";
+        int p1 = 0;
+        if (obj.equalsIgnoreCase("Piedras")) {
+            p1 = (int) ((fuerza * 20) / 100);
+        }
+        return "Podemos utilizar " + p1 + " número de piedras";
+    }
+
+    /**
+     * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE 
+     * Y EL ATACADO, SIMULANDO UN COMBATEENTRE ELLOS Y COMPROBANDO CUAL SALDRÍA VICTORIOSO 
+     * @param natacante nombre de atacante
+     * @param natacado nombre de atacado
+     * @param vatacante velocidad del atacante
+     * @param vatacado velocidad del atacado
+     * @param fatacante fuerza del atacante
+     * @param fatacado fuerza del atacado
+     * @return 
+     */
+    public static String combate(String natacante, String natacado,
+            Byte vatacante, Byte vatacado,
+            Byte fatacante, Byte fatacado) {
+
+        //Calculamos la resta de la velocidad de ambos atacantes
+        byte restavel = (byte) (vatacante - vatacado);
+        //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
+        byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
+
+        //Si la resta de la velocidad de ambos atacantes equivale a ...
+        if (restavel>30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer+" puntos de vida.";
+            if (restavel>0||<30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/2+" puntos de vida.";
+                if (restavel>-30||<0) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/3+" puntos de vida.";
+                    if (restavel<-30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer*0.8+" puntos de vida.";
+
+    }
+
+
