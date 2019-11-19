@@ -34,7 +34,13 @@ public class ApocalipsisZombieDAM {
         if(!FuncionesHSRK.comprobarCoherencia(FuncionesHSRK.velocidad, FuncionesHSRK.fuerza, FuncionesHSRK.intuicion, FuncionesHSRK.percepcion)){System.out.println(FuncionesHSRK.nombre+" es incoherente: No suma 200 puntos ");}
         
         turno++;
-        historia+="Estamos todos en el aula 5 de cenec.\n Se escucha un grito desde la calle.";
+        historia+="Estamos todos en el aula 5 de cenec.\n Se escucha un grito desde la calle.\n-----------------------\n";
+        historia+=FuncionesAJEA.nombre+": Sale corriendo para abajo. recorren "+FuncionesAJEA.desplazamiento(FuncionesAJEA.velocidad)+" metros.\n";
+        historia+=FuncionesFIJA.nombre+": Sale corriendo para abajo. recorren "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros.\n";
+        historia+=FuncionesAJAA.nombre+": Mira por la ventana. "+FuncionesAJAA.accionReaccion(turno,"mirar por la ventana")+"\n";
+        historia+=FuncionesFCMJ.nombre+": Mira por la ventana. "+FuncionesFCMJ.accionReaccion(turno,"mirar por la ventana")+"\n";
+        historia+=FuncionesHSRK.nombre+": Mira por la ventana. "+FuncionesHSRK.accionReaccion(turno,"mirar por la ventana")+"\n";
+        
         
         System.out.println(imprimirTurno(turno,historia));
     }
