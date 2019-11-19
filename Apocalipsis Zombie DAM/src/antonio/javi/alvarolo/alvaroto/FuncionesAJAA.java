@@ -19,6 +19,16 @@ public class FuncionesAJAA {
     public static byte fuerza =25 ;// fuerza del personaje de 0 a 100
     public static byte intuición =25 ;// intuicion del personaje de 0 a 100
     public static byte percepción =75 ;// percepcion del personaje de 0 a 100
+    
+    // Comprobamos que la suma total de los atributos es exactamente 200, devuelve un booleano.
+    public static boolean comprobarCoherencia(byte a1,byte a2, byte a3, byte a4){
+        boolean suma= false;
+        if(velocidad+fuerza+intuición+percepción==200){
+            suma=true;
+            
+        }
+        return suma;
+    }
 
     
 }
