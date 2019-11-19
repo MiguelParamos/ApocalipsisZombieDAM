@@ -33,6 +33,7 @@ public class ApocalipsisZombieDAM {
         if(!FuncionesFIJA.comprobarCoherencia(FuncionesFIJA.velocidad, FuncionesFIJA.fuerza, FuncionesFIJA.intuicion, FuncionesFIJA.percepcion)){System.out.println(FuncionesFIJA.nombre+" es incoherente: No suma 200 puntos ");}
         if(!FuncionesHSRK.comprobarCoherencia(FuncionesHSRK.velocidad, FuncionesHSRK.fuerza, FuncionesHSRK.intuicion, FuncionesHSRK.percepcion)){System.out.println(FuncionesHSRK.nombre+" es incoherente: No suma 200 puntos ");}
         
+        //TURNO 1
         turno++;
         historia+="Estamos todos en el aula 5 de cenec.\n Se escucha un grito desde la calle.\n-----------------------\n";
         historia+=FuncionesAJEA.nombre+": Sale corriendo para abajo. recorren "+FuncionesAJEA.desplazamiento(FuncionesAJEA.velocidad)+" metros. Estás en mitad de las escaleras\n";
@@ -42,13 +43,20 @@ public class ApocalipsisZombieDAM {
         historia+=FuncionesHSRK.nombre+": Mira por la ventana. "+FuncionesHSRK.accionReaccion(turno,"mirar por la ventana",FuncionesHSRK.percepcion)+"\n";
         System.out.println(imprimirTurno(turno,historia));
         
+        //TURNO 2
         turno++;
-        historia="Se escuchan muchos gritos desde la calle.\n Aitor Tilla se da cuenta de que vienen desde la derecha.";
+        historia="Se escuchan muchos gritos desde la calle.\n Aitor Tilla se da cuenta de que vienen desde la derecha.\n";
         historia+=FuncionesAJEA.nombre+": Sigue corriendo para abajo. recorren "+FuncionesAJEA.desplazamiento(FuncionesAJEA.velocidad)+" metros. Estás a la altura de secretaría\n";
         historia+=FuncionesFIJA.nombre+": Sigue corriendo para abajo. recorren "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros. Estás a la altura de secretaría\n";
         historia+=FuncionesAJAA.nombre+": Cierra la ventana. "+FuncionesAJAA.accionReaccion(turno,"cierro la ventana")+"\n";
         historia+=FuncionesFCMJ.nombre+": Pregunta a aitor, por qué puñetas ha cerrado la ventana. "+FuncionesFCMJ.accionReaccion(turno,"pregunto a Aitor Tilla violentamente por qué cierran la ventana")+"\n";
         historia+=FuncionesHSRK.nombre+": Pregunta qué está pasando. "+FuncionesHSRK.accionReaccion(turno,"preguntar que esta pasando")+"\n";
+        System.out.println(imprimirTurno(turno,historia));
+        
+        
+        //TURNO 3
+        turno++; 
+        historia="AJEA y Luis alberto ven a Natalia salir corriendo para arriba.\n Ven mucho alboroto en la calle. \n Los que están en el aula 5, ven como Natalia entra y les dice \n que todo el mundo fuera, que pasa algo malo en la calle, \n parece que hay un loco suelto.\n";
         System.out.println(imprimirTurno(turno,historia));
         
     }
