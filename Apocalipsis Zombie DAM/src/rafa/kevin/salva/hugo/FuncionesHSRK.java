@@ -58,7 +58,22 @@ public class FuncionesHSRK {
                 }
             }
         }
-        return null; 
+        return null;  
 
     }
+    public static String accionReaccion (byte turno, String accion){
+        if (turno ==2) {
+            if (accion.equals ("preguntar que esta pasando")){
+                return "nadie dice nada";
+            }
+        }else if (turno == 3){
+            if (accion.equals ("amenazar a Aitor Tilla")){
+                return "Aceptamos la coalición";
+            }
+        }
+        
+        return null;
+           
+    }
+    
 }

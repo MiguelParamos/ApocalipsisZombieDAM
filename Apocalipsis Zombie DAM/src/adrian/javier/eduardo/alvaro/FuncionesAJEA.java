@@ -43,6 +43,20 @@ public class FuncionesAJEA {
      */
     public static byte desplazamiento(byte velocidad) {
     return (byte)((velocidad*8)/100);
-        
+ 
     }
-}
+    
+    /**
+     * Se introduce una acción y se devuelve la consecuencia del turno
+     * @param turno valor del iterador referido al turno de juego.
+     * @param accion es la decision que se toma en cada turno.
+     * @return Devuelve lo que pasa al tomar la acción.
+     */
+    public static String accionReaccion(byte turno, String accion) {
+        if (turno == 3) {
+            if (accion.equals("intentan entrar en secretaria")) {
+                    return "No puedo entrar. Está cerrado";
+             
+        }
+        }
+

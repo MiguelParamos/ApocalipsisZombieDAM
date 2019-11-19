@@ -39,26 +39,48 @@ public class FuncionesAJAA {
         return suma;
     }
 
-
+/**
+ * Funcion que devuelve un string segun el valor de la percepcion
+ * @param turno numero del turno del personaje
+ * @param accion comprobar lo que hace el personaje
+ * @param percepcion valor que denota la la percepcion del personaje
+ * @return devuelve el string de la accion.
+ */
     public static String accionReaccion(byte turno, String accion, byte percepcion){
         if(turno==1){
-        if(accion.equalsIgnoreCase("Mirar por la ventana")){
+        if(accion.equalsIgnoreCase("mirar por la ventana")){
             
-            if (percepción < 50){
-                System.out.println("No veo nada raro");
+            if (percepcion < 50){
+                return "No veo nada raro";
             }
-            if(percepción >= 50 && percepción < 80){
-                System.out.println("Veo alboroto en general");
+            if(percepcion >= 50 && percepcion < 80){
+                return "Veo alboroto en general";
             }
-            if( percepción >= 80){
-                System.out.println("veo gente corriendo en la plaza de la derecha");
+            if( percepcion >= 80){
+               return "veo gente corriendo en la plaza de la derecha";
             }
             
         }
       }
     return "";
     }
+    /**
+     * Funcion del personaje en turnos 2 y 3
+     * @param turno numero del turno del personaje
+     * @param accion comprobar lo que hace el personaje
+     * @return String de la accion
+     */
+    public static String accionReaccion(byte turno, String accion){
+        if (turno==2&& accion.equalsIgnoreCase("cierro la ventana")){
+            return "cierro la ventana";
+        }
+        if (turno==3 && accion.equalsIgnoreCase("me amenazan para unirme")){
+            return "Aitor Tilla se une al grupo, con la condicion de no ser traicionado";
+        }
+        return "";
+    }
 }
+   
     
         
    
