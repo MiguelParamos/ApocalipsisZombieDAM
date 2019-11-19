@@ -41,9 +41,10 @@ public class FuncionesHSRK {
     * 
     * @param turno El numero de turno.
     * @param accion Lo que el personaje va a hacer. En este caso mirar por la ventana.
+     * @param percepcion Dependiendo de la percepción de los personajes sucede una cosa u otra.
     * @return Devuelve lo que sucede dependiendo de la percepción.
     */
-    public static String accionReaccion(byte turno, String accion) {
+    public static String accionReaccion(byte turno, String accion, byte percepcion) {
         if (turno == 1) {
             if (accion.equals("mirar por la ventana")) {
                 if (percepcion < 50) {
