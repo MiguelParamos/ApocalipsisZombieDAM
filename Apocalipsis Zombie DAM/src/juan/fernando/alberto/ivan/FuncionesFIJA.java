@@ -26,14 +26,14 @@ public class FuncionesFIJA {
     /**
      * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y PERCEPCION
      * DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 SINO, DEVUELVE FALSO 
-     * @param velocidad
-     * @param fuerza
-     * @param intuicion
-     * @param percepcion
+     * @param velocidad indica la velocidad del jugador
+     * @param fuerza indica la fuerza del jugador
+     * @param intuicion indica la intuicion del jugador
+     * @param percepcion indica la percepcion del jugador
      * @return
      */
     public static boolean sumar200(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
-        //SI TODOS LOS PARAMETROS SON IGUALES A 200, LA FUNCIÓN DEVOLVERÁ TRUE
+        //Si todos los parametros son equivalentes a 200, devolverá verdadero, en caso contrario, falso
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false); 
     
 
