@@ -32,10 +32,8 @@ public class FuncionesFIJA {
      * @param percepcion indica la percepcion del jugador
      * @return
      */
-    public static boolean sumar200(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
+    public static boolean compobarCoherencia(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
         //Si todos los parametros son equivalentes a 200, devolverá verdadero, en caso contrario, falso
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false); 
-    
-
     }
 }
