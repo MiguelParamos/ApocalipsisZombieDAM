@@ -1,12 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package juan.fernando.alberto.ivan;
-
-import java.util.Scanner;
-
 /**
  * Esta clase describirá los atributos y el nombre de nuestro personaje
  *
@@ -54,7 +46,7 @@ public class FuncionesFIJA {
         return v1;
     }
 
-    public static String recoger(String objeto, int fuerza) {
+    public static String recoger(String objeto, Byte fuerza) {
         int p1 = 0;
         if (objeto.equalsIgnoreCase("Piedras")) {
             p1 = (int) ((fuerza * 20) / 100);
@@ -64,8 +56,7 @@ public class FuncionesFIJA {
 
     /**
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
-     * ATACADO, SIMULANDO UN COMBATEENTRE ELLOS Y COMPROBANDO CUAL SALDRÍA
-     * VICTORIOSO
+     * ATACADO, SIMULANDO UN COMBATE ENTRE ELLOS Y COMPROBANDO CUAL VENCERÍA
      *
      * @param natacante nombre de atacante
      * @param natacado nombre de atacado
@@ -73,7 +64,8 @@ public class FuncionesFIJA {
      * @param vatacado velocidad del atacado
      * @param fatacante fuerza del atacante
      * @param fatacado fuerza del atacado
-     * @return natacante+natacado+op. Devuelve el nombre de atacante/atacado y la vida que le ha restado el uno al otro.
+     * @return natacante+natacado+op. Devuelve el nombre de atacante/atacado y
+     * la vida que le ha restado el uno al otro.
      */
     public static String combate(String natacante, String natacado,
             Byte vatacante, Byte vatacado,
@@ -84,11 +76,11 @@ public class FuncionesFIJA {
         //Calculamos la resta de la velocidad de ambos atacantes
         byte restavel = (byte) (vatacante - vatacado);
         //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
-        byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
+        byte restafuer = (byte) Math.abs((byte) fatacante - (byte) fatacado);
         //Si la resta de la velocidad de ambos atacantes equivale a X modificados restafuer
-        if (restavel > 30 ) {
+        if (restavel > 30) {
             op = restafuer;
-        }     
+        }
         if (restavel > 0 || restavel < 30) {
             op = (byte) (restafuer / 2);
         }
