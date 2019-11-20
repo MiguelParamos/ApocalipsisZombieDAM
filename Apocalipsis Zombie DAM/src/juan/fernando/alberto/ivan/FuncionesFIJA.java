@@ -79,7 +79,7 @@ public class FuncionesFIJA {
             Byte vatacante, Byte vatacado,
             Byte fatacante, Byte fatacado) {
 
-        //Variable que igualaremos a restafuer para ejecutar las distintas cuentas de manera condicional
+        //Variable que igualaremos a restafuer para ejecutar las distintas operaciones de manera condicional
         byte op = 0;
         //Calculamos la resta de la velocidad de ambos atacantes
         byte restavel = (byte) (vatacante - vatacado);
