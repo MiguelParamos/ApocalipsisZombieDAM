@@ -1,4 +1,5 @@
 package juan.fernando.alberto.ivan;
+
 /**
  * Esta clase describirá los atributos y el nombre de nuestro personaje
  *
@@ -17,8 +18,8 @@ public class FuncionesFIJA {
 
     /**
      * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y
-     * PERCEPCION DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 SINO,
-     * DEVUELVE FALSO
+     * PERCEPCION DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 EN
+     * CASO CONTRARIO, DEVUELVE FALSO
      *
      * @param velocidad indica la velocidad del jugador
      * @param fuerza indica la fuerza del jugador
@@ -46,10 +47,10 @@ public class FuncionesFIJA {
         return v1;
     }
 
-    public static String recoger(String objeto, Byte fuerza) {
+    public static String recoger(String objeto) {
         int p1 = 0;
         if (objeto.equalsIgnoreCase("Piedras")) {
-            p1 = (int) ((fuerza * 20) / 100);
+            p1 = (int) ((FuncionesFIJA.fuerza * 20) / 100);
         }
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
@@ -58,25 +59,20 @@ public class FuncionesFIJA {
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
      * ATACADO, SIMULANDO UN COMBATE ENTRE ELLOS Y COMPROBANDO CUAL VENCERÍA
      *
-     * @param natacante nombre de atacante
      * @param natacado nombre de atacado
-     * @param vatacante velocidad del atacante
      * @param vatacado velocidad del atacado
-     * @param fatacante fuerza del atacante
      * @param fatacado fuerza del atacado
      * @return natacante+natacado+op. Devuelve el nombre de atacante/atacado y
      * la vida que le ha restado el uno al otro.
      */
-    public static String combate(String natacante, String natacado,
-            Byte vatacante, Byte vatacado,
-            Byte fatacante, Byte fatacado) {
+    public static String combate(String natacado, Byte vatacado, Byte fatacado) {
 
         //Variable que igualaremos a restafuer para ejecutar las distintas operaciones de manera condicional
         byte op = 0;
         //Calculamos la resta de la velocidad de ambos atacantes
-        byte restavel = (byte) (vatacante - vatacado);
+        byte restavel = (byte) (FuncionesFIJA.velocidad - vatacado);
         //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
-        byte restafuer = (byte) Math.abs((byte) fatacante - (byte) fatacado);
+        byte restafuer = (byte) Math.abs((byte) FuncionesFIJA.fuerza - (byte) fatacado);
         //Si la resta de la velocidad de ambos atacantes equivale a X modificados restafuer
         if (restavel > 30) {
             op = restafuer;
@@ -91,7 +87,6 @@ public class FuncionesFIJA {
             op = (byte) (restafuer * 0.8);
         }
         //Devolvemos el resultado del combate           
-        return natacante + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
-
-    }
+        return FuncionesFIJA.nombre + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
+        }
 }
