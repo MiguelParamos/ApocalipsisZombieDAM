@@ -81,13 +81,17 @@ public class FuncionesFIJA {
         byte restavel = (byte) (vatacante - vatacado);
         //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
         byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
-
-        //Si la resta de la velocidad de ambos atacantes equivale a 
-        if (restavel>30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer+" puntos de vida."; }
-            if (restavel>0||restavel<30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/2+" puntos de vida.";}
-                if (restavel>-30||restavel<0) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/3+" puntos de vida.";}
-                if (restavel<-30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer*0.8+" puntos de vida.";}
-                            
-                    
+        int op = 0;
+        //Si la resta de la velocidad de ambos atacantes equivale a X modificados restafuer
+            if (restavel>0||restavel<30) { op = restafuer/2; }
+                if (restavel>-30||restavel<0) { op= restafuer/3;}
+                    if (restavel<-30) { op=(int) (restafuer*0.8);}
+        //Devolvemos el resultado del combate           
+        return natacante+" ha atacado a "+natacado+" y le ha restado "+op+" puntos de vida.";
+    
+    }
+}
+  
+    
        
 
