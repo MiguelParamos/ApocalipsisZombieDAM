@@ -79,11 +79,12 @@ public class FuncionesFIJA {
             Byte vatacante, Byte vatacado,
             Byte fatacante, Byte fatacado) {
 
+        //Variable que igualaremos a restafuer para ejecutar las distintas cuentas de manera condicional
+        int op = 0;
         //Calculamos la resta de la velocidad de ambos atacantes
         byte restavel = (byte) (vatacante - vatacado);
         //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
         byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
-        int op = 0;
         //Si la resta de la velocidad de ambos atacantes equivale a X modificados restafuer
         if (restavel > 30 ) {
             op = restafuer;
