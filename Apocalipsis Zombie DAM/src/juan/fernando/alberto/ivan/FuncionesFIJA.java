@@ -55,23 +55,25 @@ public class FuncionesFIJA {
     }
 
     public static String recoger(String objeto, int fuerza) {
-        int p1=0;
+        int p1 = 0;
         if (objeto.equalsIgnoreCase("Piedras")) {
             p1 = (int) ((fuerza * 20) / 100);
-        }   
+        }
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
 
     /**
-     * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE 
-     * Y EL ATACADO, SIMULANDO UN COMBATEENTRE ELLOS Y COMPROBANDO CUAL SALDRÍA VICTORIOSO 
+     * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
+     * ATACADO, SIMULANDO UN COMBATEENTRE ELLOS Y COMPROBANDO CUAL SALDRÍA
+     * VICTORIOSO
+     *
      * @param natacante nombre de atacante
      * @param natacado nombre de atacado
      * @param vatacante velocidad del atacante
      * @param vatacado velocidad del atacado
      * @param fatacante fuerza del atacante
      * @param fatacado fuerza del atacado
-     * @return 
+     * @return
      */
     public static String combate(String natacante, String natacado,
             Byte vatacante, Byte vatacado,
@@ -83,15 +85,17 @@ public class FuncionesFIJA {
         byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
         int op = 0;
         //Si la resta de la velocidad de ambos atacantes equivale a X modificados restafuer
-            if (restavel>0||restavel<30) { op = restafuer/2; }
-                if (restavel>-30||restavel<0) { op= restafuer/3;}
-                    if (restavel<-30) { op=(int) (restafuer*0.8);}
+        if (restavel > 0 || restavel < 30) {
+            op = restafuer / 2;
+        }
+        if (restavel > -30 || restavel < 0) {
+            op = restafuer / 3;
+        }
+        if (restavel < -30) {
+            op = (int) (restafuer * 0.8);
+        }
         //Devolvemos el resultado del combate           
-        return natacante+" ha atacado a "+natacado+" y le ha restado "+op+" puntos de vida.";
-    
+        return natacante + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
+
     }
 }
-  
-    
-       
-
