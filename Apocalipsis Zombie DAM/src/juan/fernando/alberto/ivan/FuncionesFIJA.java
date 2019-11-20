@@ -73,7 +73,7 @@ public class FuncionesFIJA {
      * @param vatacado velocidad del atacado
      * @param fatacante fuerza del atacante
      * @param fatacado fuerza del atacado
-     * @return
+     * @return natacante+natacado+op. Devuelve el nombre de atacante/atacado y la vida que le ha restado el uno al otro.
      */
     public static String combate(String natacante, String natacado,
             Byte vatacante, Byte vatacado,
@@ -85,6 +85,9 @@ public class FuncionesFIJA {
         byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
         int op = 0;
         //Si la resta de la velocidad de ambos atacantes equivale a X modificados restafuer
+        if (restavel > 30 ) {
+            op = restafuer;
+        }     
         if (restavel > 0 || restavel < 30) {
             op = restafuer / 2;
         }
