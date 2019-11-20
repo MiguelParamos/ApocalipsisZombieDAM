@@ -55,12 +55,11 @@ public class FuncionesFIJA {
     }
 
     public static String recoger(String objeto, int fuerza) {
-        String obj = "Piedras";
-        int p1 = 0;
-        if (obj.equalsIgnoreCase("Piedras")) {
+        int p1=0;
+        if (objeto.equalsIgnoreCase("Piedras")) {
             p1 = (int) ((fuerza * 20) / 100);
-        }
-        return "Podemos utilizar " + p1 + " número de piedras";
+        }   
+        return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
 
     /**
@@ -83,12 +82,12 @@ public class FuncionesFIJA {
         //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
         byte restafuer = (byte) Math.abs((int) fatacante - (int) fatacado);
 
-        //Si la resta de la velocidad de ambos atacantes equivale a ...
-        if (restavel>30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer+" puntos de vida.";
-            if (restavel>0||<30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/2+" puntos de vida.";
-                if (restavel>-30||<0) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/3+" puntos de vida.";
-                    if (restavel<-30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer*0.8+" puntos de vida.";
-
-    }
-
+        //Si la resta de la velocidad de ambos atacantes equivale a 
+        if (restavel>30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer+" puntos de vida."; }
+            if (restavel>0||restavel<30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/2+" puntos de vida.";}
+                if (restavel>-30||restavel<0) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer/3+" puntos de vida.";}
+                if (restavel<-30) { return natacante+" ha atacado a "+natacado+" y le ha restado "+restafuer*0.8+" puntos de vida.";}
+                            
+                    
+       
 
