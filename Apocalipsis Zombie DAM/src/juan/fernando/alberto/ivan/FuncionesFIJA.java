@@ -80,7 +80,7 @@ public class FuncionesFIJA {
             Byte fatacante, Byte fatacado) {
 
         //Variable que igualaremos a restafuer para ejecutar las distintas cuentas de manera condicional
-        int op = 0;
+        byte op = 0;
         //Calculamos la resta de la velocidad de ambos atacantes
         byte restavel = (byte) (vatacante - vatacado);
         //Calculamos el valor absoluto de la resta de la fuerza de ambos atacantes
@@ -90,13 +90,13 @@ public class FuncionesFIJA {
             op = restafuer;
         }     
         if (restavel > 0 || restavel < 30) {
-            op = restafuer / 2;
+            op = (byte) (restafuer / 2);
         }
         if (restavel > -30 || restavel < 0) {
-            op = restafuer / 3;
+            op = (byte) (restafuer / 3);
         }
         if (restavel < -30) {
-            op = (int) (restafuer * 0.8);
+            op = (byte) (restafuer * 0.8);
         }
         //Devolvemos el resultado del combate           
         return natacante + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
