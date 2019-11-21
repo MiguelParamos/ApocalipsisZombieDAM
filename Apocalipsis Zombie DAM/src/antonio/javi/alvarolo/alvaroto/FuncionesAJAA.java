@@ -77,7 +77,7 @@ public class FuncionesAJAA {
         if (turno==3 && accion.equalsIgnoreCase("me amenazan para unirme")){
             return "Aitor Tilla se une al grupo, con la condicion de no ser traicionado";
         }
-        if (turno==4&& accion.equalsIgnoreCase("vibra el telefono")){
+        if (turno==4&& accion.equalsIgnoreCase("vibra el teléfono")){
             return "Decir a Abascal, algo viene por la derecha, y cojo el telefono";
         } 
         return "";
