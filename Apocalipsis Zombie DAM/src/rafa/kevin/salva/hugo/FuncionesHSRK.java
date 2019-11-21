@@ -70,7 +70,12 @@ public class FuncionesHSRK {
             if (accion.equals ("amenazar a Aitor Tilla")){
                 return "Aceptamos la coalición";
             }
+        }else if (turno == 4){
+            if (accion.equals ("preguntar telefono")){
+                return "Le preguntamos a Aitor Tilla que hay en su teléfono.";
+            }
         }
+        
         
         return null;
            
