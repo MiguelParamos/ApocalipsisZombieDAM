@@ -119,6 +119,11 @@ public static String accionReaccion(byte turno, String accion) {
                 return "Piden a luis alberto trabajar juntos y cogen extintores";
 
             }
+        }else if (turno == 5) {
+            if (accion.equalsIgnoreCase("Le pegamos con el extintor en toda la cabeza")) {
+                return " hijo puta ";
+
+            }
         }
         return "";
     }
