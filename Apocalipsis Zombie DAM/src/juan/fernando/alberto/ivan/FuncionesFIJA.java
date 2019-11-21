@@ -54,6 +54,14 @@ public class FuncionesFIJA {
         }
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
+    
+     public static String accionReaccion(String accion) {
+      
+        if (accion.equalsIgnoreCase("nos aliamos y cogemos extintor")) {
+        }
+        return "Nos hemos aliado con AJEA, y hemos cogido extintores";
+    }
+
 
     /**
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
