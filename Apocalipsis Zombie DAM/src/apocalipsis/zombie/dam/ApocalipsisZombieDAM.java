@@ -68,15 +68,22 @@ public class ApocalipsisZombieDAM {
         
         //TURNO 4
         turno++; 
-        historia="Aitor Tilla nota que le vibra el teléfono\n";
-        historia+=FuncionesFCMJ.nombre+": Sale corriendo. recorre "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros.  Está por el final del aula\n";
+        historia="Aitor Tilla nota que le vibra el teléfono\n-----------------------\n";
+        historia+=FuncionesFCMJ.nombre+": Sale corriendo. recorre "+FuncionesFIJA.desplazamiento(FuncionesFCMJ.velocidad)+" metros.  Están en la puerta del aula\n";
         historia+=FuncionesHSRK.nombre+": está confuso. Pregunta a Aitor Tilla qué mira en su teléfono. "+FuncionesHSRK.accionReaccion(turno,"preguntar telefono")+"\n";
         historia+=FuncionesAJEA.nombre+": Piden a Luis alberto trabajar juntos y cogen extintores."+FuncionesAJEA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
-        historia+=FuncionesFIJA.nombre+": Piden a Luis alberto trabajar juntos y cogen extintores."+FuncionesFIJA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
+        historia+=FuncionesFIJA.nombre+": Piden a AJEA trabajar juntos y cogen extintores."+FuncionesFIJA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
         historia+=FuncionesAJAA.nombre+":Avisais a vuestro grupo de que algo viene por la derecha. Consultais el tlf. "+FuncionesAJAA.accionReaccion(turno,"vibra el teléfono")+"\n";
-        
-
         System.out.println(imprimirTurno(turno,historia));
+
+        
+        //Turno 5
+        turno++;
+        historia="Luis Alberto y AJEA ven como de repente las hojas de la puerta exterior de cenec,\n"
+                + "se abren de golpe, y entran dos tìpos con pinta rara. \n"
+                + "Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.\n-----------------------\n";
+    System.out.println(imprimirTurno(turno,historia));
+
     }
     
     /**
