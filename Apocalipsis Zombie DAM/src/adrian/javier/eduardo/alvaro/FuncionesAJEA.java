@@ -109,13 +109,13 @@ public class FuncionesAJEA {
  */
 public static String accionReaccion(byte turno, String accion) {
         if (turno == 3) {
-            if (accion.equals("intentan entrar en secretaria")) {
+            if (accion.equalsIgnoreCase("intentan entrar en secretaria")) {
                 return "No puedo entrar. Está cerrado";
 
             }
         }
         else if (turno == 4) {
-            if (accion.equals("alianza y cogen extintores")) {
+            if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
                 return "Piden a luis alberto trabajar juntos y cogen extintores";
 
             }
