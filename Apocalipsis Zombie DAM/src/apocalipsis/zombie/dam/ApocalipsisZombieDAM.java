@@ -72,7 +72,7 @@ public class ApocalipsisZombieDAM {
         historia+=FuncionesFCMJ.nombre+": Sale corriendo. recorre "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros.  Está por el final del aula\n";
         historia+=FuncionesHSRK.nombre+": está confuso. Pregunta a Aitor Tilla qué mira en su teléfono. "+FuncionesHSRK.accionReaccion(turno,"preguntar telefono")+"\n";
         historia+=FuncionesAJEA.nombre+": Piden a Luis alberto trabajar juntos y cogen extintores."+FuncionesAJEA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
-        historia+=FuncionesFIJA.nombre+": Piden a Luis alberto trabajar juntos y cogen extintores."+FuncionesAJEA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
+        historia+=FuncionesFIJA.nombre+": Piden a Luis alberto trabajar juntos y cogen extintores."+FuncionesFIJA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
         historia+=FuncionesAJAA.nombre+":Avisais a vuestro grupo de que algo viene por la derecha. Consultais el tlf. "+FuncionesAJAA.accionReaccion(turno,"vibra el teléfono")+"\n";
         
 
