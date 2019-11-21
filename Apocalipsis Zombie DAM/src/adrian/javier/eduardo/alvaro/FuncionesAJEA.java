@@ -114,7 +114,15 @@ public static String accionReaccion(byte turno, String accion) {
 
             }
         }
+        else if (turno == 4) {
+            if (accion.equals("Piden a luis alberto trabajar juntos y cogen extintores")) {
+                return "alianza y cogen extintores";
+
+            }
+        }
         return "";
     }
+
+
 }
 
