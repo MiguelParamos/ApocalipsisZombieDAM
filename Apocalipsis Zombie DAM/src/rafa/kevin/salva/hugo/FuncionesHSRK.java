@@ -21,6 +21,7 @@ public class FuncionesHSRK {
     public static byte fuerza = 70;//Fuerza del jugador 0-100
     public static byte intuicion = 30;//Intuicion del jugador 0-100
     public static byte percepcion = 30;//Percepcion del jugador 0-100
+    public static byte vida = 100; // Vida del jugador 0-100
 
     /**
      * Esta función comprueba si la suma de los cuatro parámetros es igual a 200
@@ -30,6 +31,7 @@ public class FuncionesHSRK {
      * @param fuerza es la fuerza que tiene el personaje de 0-100
      * @param intuicion es la intuicion que tiene el personaje de 0-100
      * @param percepcion es la percepcion que tiene el personaje de 0-100
+     * @param vida es la vida del personaje de 0-100
      * @return Devuelve un boolean verdadero si suman 200, falso si no.
      */
     public static boolean comprobarCoherencia(byte velocidad, byte fuerza, byte intuicion, byte percepcion) {
