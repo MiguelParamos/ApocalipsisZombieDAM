@@ -32,7 +32,7 @@ public class FuncionesFIJA {
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false);
     }
 
-    /**
+     /**
      * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
      * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PRErequisito: La
      * velocidad debe de estar entre 0 y 100 POSTrequisito: La velocidad máxima
