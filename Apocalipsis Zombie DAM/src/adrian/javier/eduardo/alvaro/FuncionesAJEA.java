@@ -49,16 +49,18 @@ public class FuncionesAJEA {
         return (byte) ((velocidad * 8) / 100);
 
     }
-/**
- * La funcion realiza los calculos relacionados con el combate
- * @param nombreAtacante el nombre del que ataca
- * @param nombreAtacado el nombre del que es atacado
- * @param velocidadAtacante la velocidad del que ataca
- * @param velocidadAtacado la velocidad del que es atacado
- * @param fuerzaAtacante la fuerza del que ataca
- * @param fuerzaAtacado la fuerza del que es atacado
- * @return devuelve un string con los resultados del combate
- */
+
+    /**
+     * La funcion realiza los calculos relacionados con el combate
+     *
+     * @param nombreAtacante el nombre del que ataca
+     * @param nombreAtacado el nombre del que es atacado
+     * @param velocidadAtacante la velocidad del que ataca
+     * @param velocidadAtacado la velocidad del que es atacado
+     * @param fuerzaAtacante la fuerza del que ataca
+     * @param fuerzaAtacado la fuerza del que es atacado
+     * @return devuelve un string con los resultados del combate
+     */
 
     /**
      * La funcion realiza los calculos relacionados con el combate
@@ -86,18 +88,6 @@ public class FuncionesAJEA {
             return nombreAtacante + " ataca a " + nombreAtacado + " y le quita: " + restaFuer / 2 + " de vida";
 
         }
-        if (restaVel <=0 && restaVel >= -30) {
-
-            return nombreAtacante + " ataca a " + nombreAtacado + " y le quita: " + restaFuer / 3 + " de vida";
-
-        } 
-
-            return nombreAtacante + " ataca a " + nombreAtacado + " y le quita: " + restaFuer * 0.8 + " de vida";
-
-        
-
-    }
-
         if (restaVel <= 0 && restaVel >= -30) {
 
             return nombreAtacante + " ataca a " + nombreAtacado + " y le quita: " + restaFuer / 3 + " de vida";
@@ -108,14 +98,16 @@ public class FuncionesAJEA {
 
     }
 
-    /**
-     * Se introduce una acción y se devuelve la consecuencia del turno
-     *
-     * @param turno valor del iterador referido al turno de juego.
-     * @param accion es la decision que se toma en cada turno.
-     * @return Devuelve lo que pasa al tomar la acción.
-     */
-    public static String accionReaccion(byte turno, String accion) {
+
+
+/**
+ * Se introduce una acción y se devuelve la consecuencia del turno
+ *
+ * @param turno valor del iterador referido al turno de juego.
+ * @param accion es la decision que se toma en cada turno.
+ * @return Devuelve lo que pasa al tomar la acción.
+ */
+public static String accionReaccion(byte turno, String accion) {
         if (turno == 3) {
             if (accion.equals("intentan entrar en secretaria")) {
                 return "No puedo entrar. Está cerrado";
@@ -125,3 +117,4 @@ public class FuncionesAJEA {
         return "";
     }
 }
+
