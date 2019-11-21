@@ -115,7 +115,12 @@ public static String accionReaccion(byte turno, String accion) {
             }
         }
         else if (turno == 4) {
-            if (accion.equals("Piden a luis alberto trabajar juntos y cogen extintores")) {
+            if (accion.equalsIgnoreCase("Piden a luis alberto trabajar juntos y cogen extintores")) {
+                return "alianza y cogen extintores";
+
+            }
+        } else if (turno == 5) {
+            if (accion.equalsIgnoreCase("Piden a luis alberto trabajar juntos y cogen extintores")) {
                 return "alianza y cogen extintores";
 
             }
