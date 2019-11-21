@@ -55,9 +55,9 @@ public class FuncionesFIJA {
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
     
-     public static String accionReaccion(String accion) {
+     public static String accionReaccion(Byte turno, String accion) {
       
-        if (accion.equalsIgnoreCase("nos aliamos y cogemos extintor")) {
+        if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
         }
         return "Nos hemos aliado con AJEA, y hemos cogido extintores";
     }
