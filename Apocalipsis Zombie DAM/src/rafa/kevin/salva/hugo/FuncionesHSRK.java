@@ -78,9 +78,15 @@ public class FuncionesHSRK {
             }
         }
         
-        
         return null;
            
     }
     
+    public static String robarObjeto(String nombre_Atracar, byte mi_vel, byte su_vel, byte mi_fuerza, byte su_fuerza){
+        if(mi_vel >= su_vel && mi_fuerza >= su_fuerza){
+            return "Le quito el objeto a Aitor Torilla";
+        } else {
+            return "No logro quitárselo. Me pregunta ¿Qué estás haciendo?";
+        }
+    }
 }
