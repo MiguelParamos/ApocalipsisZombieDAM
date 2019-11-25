@@ -64,13 +64,13 @@ public class FuncionesFIJA {
      */
     public static String accionReaccion(Byte turno, String accion) {
 
-        if (turno == 4 && accion.equalsIgnoreCase("Alianza y cogen piedras")) {
+        if (turno == 4) {
             return "Nos hemos aliado con AJEA";
         }
-        if (turno == 5 && accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
+        if (turno == 5) {
             return " Cabrón ";
         }
-        if (turno == 6 && accion.equalsIgnoreCase("Le preguntamos -¿Qué ha pasado?-")) {
+        if (turno == 6) {
             return " Que me han tirado una piedra en la cabeza ";
         }
         return "";
