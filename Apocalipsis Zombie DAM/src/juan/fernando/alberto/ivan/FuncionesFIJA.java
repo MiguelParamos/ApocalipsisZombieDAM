@@ -33,7 +33,7 @@ public class FuncionesFIJA {
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false);
     }
 
-     /**
+    /**
      * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
      * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PRErequisito: La
      * velocidad debe de estar entre 0 y 100 POSTrequisito: La velocidad máxima
@@ -55,14 +55,13 @@ public class FuncionesFIJA {
         }
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
-    
-     public static String accionReaccion(Byte turno, String accion) {
-      
+
+    public static String accionReaccion(Byte turno, String accion) {
+
         if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
         }
         return "Nos hemos aliado con AJEA, y hemos cogido extintores";
     }
-
 
     /**
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
@@ -97,5 +96,16 @@ public class FuncionesFIJA {
         }
         //Devolvemos el resultado del combate           
         return FuncionesFIJA.nombre + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
+    }
+
+    public static String pegarPedrada(String nombre_ataque, Byte fatacado) {
+        byte fuerza = (byte) (FuncionesFIJA.fuerza);
+        if (fuerza >= fatacado) {
+            return "Le pega una pedrada y grita: CABRÓN!";
+        } else {
+            return "Fallo y corro cual putilla";
+
         }
+
+    }
 }
