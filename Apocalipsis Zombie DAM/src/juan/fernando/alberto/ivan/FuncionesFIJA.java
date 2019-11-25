@@ -56,11 +56,11 @@ public class FuncionesFIJA {
     }
 
     /**
-     * Se introduce una acción y se devuelve la consecuencia del turno
+     * INTRODUCE UNA ACCIÓN Y DEVUELVE UNA CONSECUENCIA
      *
      * @param turno valor del iterador es el que indica el turno del juego
      * @param accion es la decision que se toma en cada turno
-     * @return Devuelve lo que pasa al tomar la acción
+     * @return Devuelve la consecuencia de tomar la acción
      */
     public static String accionReaccion(Byte turno, String accion) {
 
@@ -69,7 +69,6 @@ public class FuncionesFIJA {
         }
         if (turno == 5 && accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
             return " Cabrón ";
-
         }
         return "";
     }
