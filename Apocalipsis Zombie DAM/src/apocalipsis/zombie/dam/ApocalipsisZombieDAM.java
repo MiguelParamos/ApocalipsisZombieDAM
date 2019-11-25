@@ -62,8 +62,15 @@ public class ApocalipsisZombieDAM {
         historia+=FuncionesAJEA.nombre+": Intenta meterse en secretaría. "+FuncionesAJEA.accionReaccion(turno,"meterse en secretaria")+"\n";
         historia+=FuncionesFIJA.nombre+": Cogen piedras de secretaría. "+FuncionesFIJA.recoger("piedras")+"\n";
         historia+=FuncionesAJAA.nombre+": Reciben amenazas para unise a grupo. "+FuncionesAJAA.accionReaccion(turno,"me amenazan para unirme")+"\n";
+        System.out.println(imprimirTurno(turno,historia));
         
-
+        //TURNO 4
+         turno++; 
+        historia=mensajeTexto(FuncionesFCMJ.nombre, FuncionesFCMJ.percepcion, FuncionesFCMJ.intuicion);
+        historia+=mensajeTexto(FuncionesHSRK.nombre, FuncionesHSRK.percepcion, FuncionesHSRK.intuicion);
+        historia+=mensajeTexto(FuncionesAJEA.nombre, FuncionesAJEA.percepcion, FuncionesAJEA.intuicion);
+        historia+=mensajeTexto(FuncionesFIJA.nombre, FuncionesFIJA.percepcion, FuncionesFIJA.intuicion);
+        historia+=mensajeTexto(FuncionesAJAA.nombre, FuncionesAJAA.percepción, FuncionesAJAA.intuición);
         System.out.println(imprimirTurno(turno,historia));
         
     }
@@ -77,8 +84,20 @@ public class ApocalipsisZombieDAM {
      */
     public static String imprimirTurno(byte turno,String historia){
             return "|--------------------------|\n|---------Turno "+turno+"----------|\n"+historia+"\n\n";            
-    
-    
     } 
+    
+    /**
+     * Función que determina si en el turno 4 se recibe el mensaje de texto
+     * @param nombre nombre de quien puede recibir el mensaje
+     * @param percepcion percepción 0-100 del personaje
+     * @param intuicion intuición 0-100 del personaje
+     * @return String que indica si se recibe el mensaje, o cadena vacía.
+     */
+    public static String mensajeTexto(String nombre,byte percepcion,byte intuicion){
+        if(percepcion>=50||intuicion>=80){
+            return nombre+" nota el teléfono vibrar.\n";
+        }
+        return "";
+    }
     
 }
