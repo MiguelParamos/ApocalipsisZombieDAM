@@ -56,12 +56,28 @@ public class FuncionesFIJA {
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
 
+    /**
+    * Se introduce una acción y se devuelve la consecuencia del turno
+    * @param turno el valor del iterador es el que indica el turno del juego
+    * @param accion es la decision que se toma en cada turno
+    * @return Devuelve lo que pasa al tomar la acción
+    */
     public static String accionReaccion(Byte turno, String accion) {
 
-        if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
+        if (turno == 4) {
+            if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
         }
         return "Nos hemos aliado con AJEA, y hemos cogido extintores";
+           }
+        else if (turno == 5) {
+            if (accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
+        return " Cabrón ";
+            }
+        }
+        return "";
     }
+
+    
 
     /**
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
@@ -96,16 +112,5 @@ public class FuncionesFIJA {
         }
         //Devolvemos el resultado del combate           
         return FuncionesFIJA.nombre + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
-    }
-
-    public static String pegarPedrada(String nombre_ataque, Byte fatacado) {
-        byte fuerza = (byte) (FuncionesFIJA.fuerza);
-        if (fuerza >= fatacado) {
-            return "Le pega una pedrada y grita: CABRÓN!";
-        } else {
-            return "Fallo y corro cual putilla";
-
-        }
-
     }
 }
