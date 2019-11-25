@@ -121,7 +121,7 @@ public static String accionReaccion(byte turno, String accion) {
             }
         }else if (turno == 5) {
             if (accion.equalsIgnoreCase("Le pegamos con el extintor en toda la cabeza")) {
-                return " hijo puta ";
+                return " recibe un extintorazo, y nos grita: hijo p**a, me ha dolio ";
 
             }
         }
