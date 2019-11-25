@@ -81,7 +81,16 @@ public class FuncionesHSRK {
         return null;
            
     }
-    
+    /**
+     * Esta función valora la posibilidad de robarle el teléfono a uno de los personajes, comparando la velocidad y la fuerza de ambos.
+     * 
+     * @param nombre_Atracar personaje al que atacamos
+     * @param mi_vel mi velocidad
+     * @param su_vel su velocidad
+     * @param mi_fuerza mi fuerza
+     * @param su_fuerza su fuerza
+     * @return Devuelve si finalmente logramos quitarle el objeto
+     */
     public static String robarObjeto(String nombre_Atracar, byte mi_vel, byte su_vel, byte mi_fuerza, byte su_fuerza){
         if(mi_vel >= su_vel && mi_fuerza >= su_fuerza){
             return "Le quito el objeto a Aitor Torilla";

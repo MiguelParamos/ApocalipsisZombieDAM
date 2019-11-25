@@ -67,18 +67,16 @@ public class FuncionesFCMJ {
             if (accion.equals("pregunto a Aitor Tilla violentamente por qué cierran la ventana")) {
                 return "no nos responde";
             }
-        }else if (turno==3){
-            if (accion.equals("amenazar a Aitor Tilla")){
+        } else if (turno == 3) {
+            if (accion.equals("amenazar a Aitor Tilla")) {
                 return "aceptan la proposicion";
             }
         }else if (turno==5){
             if (accion.equals("Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.")){
-                return "esperan a Aitor Tilla y a Abascal";
+                return "esperan a Aitor Tilla y a Abascal y cogen el extintor";
             }
-        return "";
        
     }
-
-    
-
+        return "";
+}
 }
