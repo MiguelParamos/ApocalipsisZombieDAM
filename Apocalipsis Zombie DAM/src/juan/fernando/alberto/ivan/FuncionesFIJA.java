@@ -57,10 +57,18 @@ public class FuncionesFIJA {
     }
     
      public static String accionReaccion(Byte turno, String accion) {
-      
-        if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
+
+        if (turno == 4) {
+            if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
         }
-        return "Nos hemos aliado con AJEA, y hemos cogido extintores";
+        return "Nos hemos aliado con AJEA";
+           }
+        else if (turno == 5) {
+            if (accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
+        return " Cabrón ";
+            }
+        }
+        return "";
     }
 
 
