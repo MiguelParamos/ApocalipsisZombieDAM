@@ -59,7 +59,7 @@ public class FuncionesFIJA {
      public static String accionReaccion(Byte turno, String accion) {
 
         if (turno == 4) {
-            if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
+            if (accion.equalsIgnoreCase("alianza y cogen piedras")) {
         }
         return "Nos hemos aliado con AJEA";
            }
