@@ -90,7 +90,7 @@ public class FuncionesHSRK {
      * @param su_vel su velocidad
      * @param mi_fuerza mi fuerza
      * @param su_fuerza su fuerza
-     * @return 
+     * @return Devuelve si finalmente logramos quitarle el objeto
      */
     public static String robarObjeto(String nombre_Atracar, byte mi_vel, byte su_vel, byte mi_fuerza, byte su_fuerza){
         if(mi_vel >= su_vel && mi_fuerza >= su_fuerza){
