@@ -15,7 +15,6 @@ public class FuncionesFIJA {
     public static byte fuerza = 90;  //Fuerza 0-100 del jugador
     public static byte intuicion = 30; //Intuición 0-100 del jugador
     public static byte percepcion = 30; //Percepción 0-100 del jugador
-    
 
     /**
      * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y
@@ -33,7 +32,7 @@ public class FuncionesFIJA {
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false);
     }
 
-     /**
+    /**
      * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
      * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PRErequisito: La
      * velocidad debe de estar entre 0 y 100 POSTrequisito: La velocidad máxima
@@ -55,28 +54,25 @@ public class FuncionesFIJA {
         }
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
-    
-    /**
-    * Se introduce una acción y se devuelve la consecuencia del turno
-    * @param turno valor del iterador es el que indica el turno del juego
-    * @param accion es la decision que se toma en cada turno
-    * @return Devuelve lo que pasa al tomar la acción
-    */
-     public static String accionReaccion(Byte turno, String accion) {
 
-        if (turno == 4) {
-            if (accion.equalsIgnoreCase("alianza y cogen piedras")) {
+    /**
+     * Se introduce una acción y se devuelve la consecuencia del turno
+     *
+     * @param turno valor del iterador es el que indica el turno del juego
+     * @param accion es la decision que se toma en cada turno
+     * @return Devuelve lo que pasa al tomar la acción
+     */
+    public static String accionReaccion(Byte turno, String accion) {
+
+        if (turno == 4 && accion.equalsIgnoreCase("alianza y cogen piedras")) {
+            return "Nos hemos aliado con AJEA";
         }
-        return "Nos hemos aliado con AJEA";
-           }
-        else if (turno == 5) {
-            if (accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
-        return " Cabrón ";
-            }
+        if (turno == 5 && accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
+            return " Cabrón ";
+
         }
         return "";
     }
-
 
     /**
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
@@ -111,5 +107,5 @@ public class FuncionesFIJA {
         }
         //Devolvemos el resultado del combate           
         return FuncionesFIJA.nombre + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
-        }
+    }
 }
