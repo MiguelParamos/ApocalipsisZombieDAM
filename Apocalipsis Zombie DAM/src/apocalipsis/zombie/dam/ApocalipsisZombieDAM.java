@@ -90,7 +90,12 @@ public class ApocalipsisZombieDAM {
                 + "se abren de golpe, y entran dos tìpos con pinta rara. \n"
                 + "Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.\n-----------------------\n";
     System.out.println(imprimirTurno(turno,historia));
-
+     historia+=FuncionesFCMJ.nombre+": "+FuncionesFCMJ.accionReaccion(turno,"Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.")+"\n";
+        historia+=FuncionesHSRK.nombre+": está confuso. Pregunta a Aitor Tilla qué mira en su teléfono. "+FuncionesHSRK.accionReaccion(turno,"preguntar telefono")+"\n";
+        historia+=FuncionesAJEA.nombre+": Le arrean con el extintor al que acaba de entrar. "+FuncionesAJEA.accionReaccion(turno,"Le pegamos con el extintor en toda la cabeza")+"\n";
+        historia+=FuncionesFIJA.nombre+": Piden a AJEA trabajar juntos y cogen extintores."+FuncionesFIJA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
+        historia+=FuncionesAJAA.nombre+":Se asusta del ruido, y buscan otra salida. "+FuncionesAJAA.accionReaccion(turno,"Oigo un fuerte ruido abajo")+" Sabes que todos los balcones están cerrados, y la única salida es la puerta principal.\n";
+       
     }
     
     /**

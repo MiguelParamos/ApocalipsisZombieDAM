@@ -73,12 +73,10 @@ public class FuncionesFCMJ {
             }
         }else if (turno==5){
             if (accion.equals("Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.")){
-                return "esperan a Aitor Tilla y a Abascal";
+                return "esperan a Aitor Tilla y a Abascal y cogen el extintor";
             }
-        return "";
        
     }
-
-    
-
+        return "";
+}
 }
