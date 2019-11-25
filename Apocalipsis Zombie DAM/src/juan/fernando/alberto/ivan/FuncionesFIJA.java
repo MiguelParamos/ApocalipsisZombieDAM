@@ -56,6 +56,12 @@ public class FuncionesFIJA {
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
     
+    /**
+    * Se introduce una acción y se devuelve la consecuencia del turno
+    * @param turno valor del iterador es el que indica el turno del juego
+    * @param accion es la decision que se toma en cada turno
+    * @return Devuelve lo que pasa al tomar la acción
+    */
      public static String accionReaccion(Byte turno, String accion) {
 
         if (turno == 4) {
