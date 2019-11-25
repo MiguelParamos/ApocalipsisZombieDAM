@@ -67,15 +67,13 @@ public class FuncionesFCMJ {
             if (accion.equals("pregunto a Aitor Tilla violentamente por qué cierran la ventana")) {
                 return "no nos responde";
             }
-        }else if (turno==3){
-            if (accion.equals("amenazar a Aitor Tilla")){
+        } else if (turno == 3) {
+            if (accion.equals("amenazar a Aitor Tilla")) {
                 return "aceptan la proposicion";
             }
         }
         return "";
-       
-    }
 
-    
+    }
 
 }
