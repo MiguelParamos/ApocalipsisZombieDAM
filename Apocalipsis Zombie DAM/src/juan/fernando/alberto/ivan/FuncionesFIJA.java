@@ -70,6 +70,9 @@ public class FuncionesFIJA {
         if (turno == 5 && accion.equalsIgnoreCase("Le pegamos con una piedra en la cabeza")) {
             return " Cabrón ";
         }
+        if (turno == 6 && accion.equalsIgnoreCase("Le preguntamos -¿Qué ha pasado?-")) {
+            return " Que me han tirado una piedra en la cabeza ";
+        }
         return "";
     }
 
