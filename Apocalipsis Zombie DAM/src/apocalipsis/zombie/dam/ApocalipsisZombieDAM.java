@@ -59,7 +59,7 @@ public class ApocalipsisZombieDAM {
         historia="AJEA y Luis alberto ven a Natalia salir corriendo para arriba.\n Ven mucho alboroto en la calle. \n Los que están en el aula 5, ven como Natalia entra y les dice \n que todo el mundo fuera, que pasa algo malo en la calle, \n parece que hay un loco suelto.\n-----------------------\n";
         historia+=FuncionesFCMJ.nombre+": Amenazan a Aitor Tilla para que colabore con ellos. "+FuncionesFCMJ.accionReaccion(turno,"amenazar a Aitor Tilla")+"\n";
         historia+=FuncionesHSRK.nombre+": Amenazan a Aitor Tilla para que colabore con ellos. "+FuncionesHSRK.accionReaccion(turno,"amenazar a Aitor Tilla")+"\n";
-        historia+=FuncionesAJEA.nombre+": Intenta meterse en secretaría. "+FuncionesAJEA.accionReaccion(turno,"meterse en secretaria")+"\n";
+        historia+=FuncionesAJEA.nombre+": Intenta meterse en secretaría. "+FuncionesAJEA.accionReaccion(turno,"intentan entrar en secretaria")+"\n";
         historia+=FuncionesFIJA.nombre+": Cogen piedras de secretaría. "+FuncionesFIJA.recoger("piedras")+"\n";
         historia+=FuncionesAJAA.nombre+": Reciben amenazas para unise a grupo. "+FuncionesAJAA.accionReaccion(turno,"me amenazan para unirme")+"\n";
         System.out.println(imprimirTurno(turno,historia));
@@ -73,6 +73,24 @@ public class ApocalipsisZombieDAM {
         historia+=mensajeTexto(FuncionesAJAA.nombre, FuncionesAJAA.percepción, FuncionesAJAA.intuición);
         System.out.println(imprimirTurno(turno,historia));
         
+        //TURNO 4
+        turno++; 
+        historia="Aitor Tilla nota que le vibra el teléfono\n-----------------------\n";
+        historia+=FuncionesFCMJ.nombre+": Sale corriendo. recorre "+FuncionesFIJA.desplazamiento(FuncionesFCMJ.velocidad)+" metros.  Están en la puerta del aula\n";
+        historia+=FuncionesHSRK.nombre+": está confuso. Pregunta a Aitor Tilla qué mira en su teléfono. "+FuncionesHSRK.accionReaccion(turno,"preguntar telefono")+"\n";
+        historia+=FuncionesAJEA.nombre+": Piden a Luis alberto trabajar juntos y cogen extintores."+FuncionesAJEA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
+        historia+=FuncionesFIJA.nombre+": Piden a AJEA trabajar juntos y cogen extintores."+FuncionesFIJA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
+        historia+=FuncionesAJAA.nombre+":Avisais a vuestro grupo de que algo viene por la derecha. Consultais el tlf. "+FuncionesAJAA.accionReaccion(turno,"vibra el teléfono")+"\n";
+        System.out.println(imprimirTurno(turno,historia));
+
+        
+        //Turno 5
+        turno++;
+        historia="Luis Alberto y AJEA ven como de repente las hojas de la puerta exterior de cenec,\n"
+                + "se abren de golpe, y entran dos tìpos con pinta rara. \n"
+                + "Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.\n-----------------------\n";
+    System.out.println(imprimirTurno(turno,historia));
+
     }
     
     /**
