@@ -82,7 +82,7 @@ public class FuncionesHSRK {
            
     }
     /**
-     * Esta función valora la posibilidad de robarle el teléfono a uno de los personajes, comparando con la velocidad y la fuerza de ambos.
+     * Esta función valora la posibilidad de robarle el teléfono a uno de los personajes, comparando la velocidad y la fuerza de ambos.
      * 
      * @param nombre_Atracar personaje al que atacamos
      * @param mi_vel mi velocidad
