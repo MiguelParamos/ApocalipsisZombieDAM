@@ -36,7 +36,7 @@ public class FuncionesFIJA {
      * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
      * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PREREESCRITO: 
      * LA VELOCIDAD DEBE DE ESTAR ENTRE 0 Y 100 POSTREESCRITO
-     * LA VELOCIDAD MÁXIMA VA  SER 8 METROS
+     * LA VELOCIDAD MÁXIMA VA A SER 8 METROS
      *
      * @param velocidad equivalente a la velocidad de nuestro zombie
      * @return v1, resultado de la regla de 3 calculada
