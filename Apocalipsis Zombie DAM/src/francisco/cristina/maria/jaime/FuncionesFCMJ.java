@@ -21,6 +21,7 @@ public class FuncionesFCMJ {
     public static byte percepcion = 40;//Percepción 0-100 del jugador
     public static byte intuicion = 30;//Intuicción 0-100 del jugador
     public static byte vida = 100;//Vida 0-100 del jugador
+
     /**
      * Función que comprueba si la suma total de los atributos es 200.
      *
@@ -66,15 +67,17 @@ public class FuncionesFCMJ {
             if (accion.equals("pregunto a Aitor Tilla violentamente por qué cierran la ventana")) {
                 return "no nos responde";
             }
-        }else if (turno==3){
-            if (accion.equals("amenazar a Aitor Tilla")){
+        } else if (turno == 3) {
+            if (accion.equals("amenazar a Aitor Tilla")) {
                 return "aceptan la proposicion";
+            }
+        } else if (turno == 5) {
+            if (accion.equals("Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.")) {
+                return "esperan a Aitor Tilla y a Abascal y cogen el extintor";
             }
         }
         return "";
-       
-    }
 
-    
+    }
 
 }
