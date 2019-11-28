@@ -20,6 +20,7 @@ public class FuncionesFCMJ {
     public static byte velocidad = 70;//Velocidad 0-100 del jugador
     public static byte percepcion = 40;//Percepción 0-100 del jugador
     public static byte intuicion = 30;//Intuicción 0-100 del jugador
+    public static byte vida = 100;//Vida 0-100 del jugador
     /**
      * Función que comprueba si la suma total de los atributos es 200.
      *
