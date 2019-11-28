@@ -102,8 +102,13 @@ public class ApocalipsisZombieDAM {
         
         //TURNO 7
         turno++;
-        historia="Luis Alberto ve entrar por la puerta, lo que parece un zombie, detrás del ruido. Heusequio y Abascal oyen mucho ruido abajo. Aitor Tilla distingue golpes e insultos.";
-        
+        historia="Luis Alberto ve entrar por la puerta, lo que parece un zombie, detrás del ruido. Heusequio y Abascal oyen mucho ruido abajo. Aitor Tilla distingue golpes e insultos.\n";
+        //Sumamos 20 de fuerza a FIJA por tener el extintor
+        historia+=FuncionesFIJA.nombre+": Atacan al zombie con el extintor. "+FuncionesAJEA.combate(FuncionesFIJA.nombre,"Zombie Amelio",FuncionesFIJA.velocidad, (byte)13, (byte)(FuncionesFIJA.fuerza+20),(byte)90)+"\n";
+        byte vidaZombieAmelio=80;
+        historia+=FuncionesAJEA.nombre+": Siguen corriendo hacia calle comedias. "+FuncionesFIJA.desplazamiento(FuncionesAJEA.velocidad)+" metros, entrais en el supercaro, y no hay un alma dentro. Ni siquiera el dependiente está.\n";
+        historia+=FuncionesAJAA.nombre+": Cogen una torre, e intentan atacar a Heusequio."+ FuncionesAJEA.combate(FuncionesAJAA.nombre,FuncionesFCMJ.nombre,FuncionesAJAA.velocidad,FuncionesFCMJ.velocidad,(byte)(FuncionesAJAA.fuerza+10),(byte)(FuncionesFCMJ.fuerza+20));
+        //FuncionesFCMJ.vi
         System.out.println(imprimirTurno(turno,historia));
         
     }

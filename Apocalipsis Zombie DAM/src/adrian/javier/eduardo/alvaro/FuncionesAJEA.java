@@ -77,7 +77,7 @@ public class FuncionesAJEA {
 
         byte restaVel = (byte) (velocidadAtacante - velocidadAtacado);
 
-        byte restaFuer = (byte) (Math.abs(fuerzaAtacante - fuerzaAtacado));
+        byte restaFuer = (byte)((fuerzaAtacante - fuerzaAtacado)>0?(fuerzaAtacante - fuerzaAtacado):(byte)0);
 
         if (restaVel > 30) {
 
@@ -90,11 +90,11 @@ public class FuncionesAJEA {
         }
         if (restaVel <= 0 && restaVel >= -30) {
 
-            return nombreAtacante + " ataca a " + nombreAtacado + " y le quita: " + restaFuer / 3 + " de vida";
+            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + restaFuer / 2 + " de vida";
 
         }
 
-        return nombreAtacante + " ataca a " + nombreAtacado + " y le quita: " + restaFuer * 0.8 + " de vida";
+        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + restaFuer + " de vida";
 
     }
 
