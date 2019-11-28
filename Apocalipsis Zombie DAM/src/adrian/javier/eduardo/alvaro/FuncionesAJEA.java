@@ -20,6 +20,7 @@ public class FuncionesAJEA {
     public static byte fuerza = 80;//fuerza 0-100 jugador
     public static byte intuicion = 40;//intuicion 0-100 jugador
     public static byte percepcion = 20;//percepcion 0-100 jugador
+    public static byte vida = 100;//vida 0-100 jugador
 
     /**
      * Esta funcion comprueba que el personaje tiene bien repartido los puntos
