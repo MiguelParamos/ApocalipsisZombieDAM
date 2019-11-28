@@ -5,6 +5,8 @@
  */
 package adrian.javier.eduardo.alvaro;
 
+import java.util.Random;
+
 /**
  * Aqui se definen los puntos repartidos al personaje.
  *
@@ -62,7 +64,6 @@ public class FuncionesAJEA {
      * @param fuerzaAtacado la fuerza del que es atacado
      * @return devuelve un string con los resultados del combate
      */
-
     /**
      * La funcion realiza los calculos relacionados con el combate
      *
@@ -78,7 +79,7 @@ public class FuncionesAJEA {
 
         byte restaVel = (byte) (velocidadAtacante - velocidadAtacado);
 
-        byte restaFuer = (byte)((fuerzaAtacante - fuerzaAtacado)>0?(fuerzaAtacante - fuerzaAtacado):(byte)0);
+        byte restaFuer = (byte) ((fuerzaAtacante - fuerzaAtacado) > 0 ? (fuerzaAtacante - fuerzaAtacado) : (byte) 0);
 
         if (restaVel > 30) {
 
@@ -91,31 +92,28 @@ public class FuncionesAJEA {
         }
         if (restaVel <= 0 && restaVel >= -30) {
 
-            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer>0?0:-restaFuer) / 2 + " de vida";
+            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer > 0 ? 0 : -restaFuer) / 2 + " de vida";
 
         }
 
-        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " +  (restaFuer>0?0:-restaFuer) + " de vida";
+        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer > 0 ? 0 : -restaFuer) + " de vida";
 
     }
 
-
-
-/**
- * Se introduce una acción y se devuelve la consecuencia del turno
- *
- * @param turno valor del iterador referido al turno de juego.
- * @param accion es la decision que se toma en cada turno.
- * @return Devuelve lo que pasa al tomar la acción.
- */
-public static String accionReaccion(byte turno, String accion) {
+    /**
+     * Se introduce una acción y se devuelve la consecuencia del turno
+     *
+     * @param turno valor del iterador referido al turno de juego.
+     * @param accion es la decision que se toma en cada turno.
+     * @return Devuelve lo que pasa al tomar la acción.
+     */
+    public static String accionReaccion(byte turno, String accion) {
         if (turno == 3) {
             if (accion.equals("intentan entrar en secretaria")) {
                 return "No puedo entrar. Está cerrado";
 
             }
-        }
-        else if (turno == 4) {
+        } else if (turno == 4) {
             if (accion.equals("alianza y cogen extintores")) {
                 return "Piden a luis alberto trabajar juntos y cogen extintores";
 
@@ -124,6 +122,31 @@ public static String accionReaccion(byte turno, String accion) {
         return "";
     }
 
+    public static String buscar(byte percepcion, String[] items) {
+
+        String resultado = "";
+        Random aleatorio = new Random();
+        int rand;
+
+        if (percepcion < 30) {
+            rand = aleatorio.nextInt(4);
+
+            return resultado = items[rand];
+
+        } else if (percepcion >= 30 && percepcion <= 70) {
+
+            for (int i = 0; i < 2; i++) {
+                rand = aleatorio.nextInt(4);
+                resultado = resultado + items[rand]+"+";
+            }
+            return resultado;
+        }
+
+        for (int i = 0; i < 3; i++) {
+            rand = aleatorio.nextInt(4);
+            resultado = resultado + items[rand]+"+";
+        }
+        return resultado;
+    }
 
 }
-
