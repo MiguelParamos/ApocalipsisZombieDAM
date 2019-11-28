@@ -15,13 +15,12 @@ public class FuncionesFIJA {
     public static byte fuerza = 90;  //Fuerza 0-100 del jugador
     public static byte intuicion = 30; //Intuición 0-100 del jugador
     public static byte percepcion = 30; //Percepción 0-100 del jugador
-    public static byte vida = 100;//Vida 0 - 100 del jugador
 
     /**
-     * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y
-     * PERCEPCION DEVUELVE VERDADERO, EN CASO DE QUE SEA EQUIVALENTE A 200 EN
-     * CASO CONTRARIO, DEVUELVE FALSO
-     *
+     * ESTA FUNCIÓN RECOGE LAS VARIABLES: VELOCIDAD, FUERZA, INTUICION Y PERCEPCION 
+     * DEVUELVE VERDADERO, EN EL CASO DE QUE SEA EQUIVALENTE A 200 PUNTOS
+     * Y EN CASO CONTRARIO, DEVUELVE FALSO
+     * 
      * @param velocidad indica la velocidad del jugador
      * @param fuerza indica la fuerza del jugador
      * @param intuicion indica la intuicion del jugador
@@ -29,18 +28,18 @@ public class FuncionesFIJA {
      * @return
      */
     public static boolean comprobarCoherencia(Byte velocidad, Byte fuerza, Byte intuicion, Byte percepcion) {
-        //Si todos los parametros son equivalentes a 200, devolverá verdadero, en caso contrario, falso
+        //Si todos los parametros son equivalentes a 200 puntos, devolverá verdadero, sino, devuelve falso
         return ((velocidad + fuerza + intuicion + percepcion == 200) ? true : false);
     }
 
     /**
      * ESTA FUNCIÓN RECOGE LA VELOCIDAD DE NUESTRO PERSONAJE, Y CALCULA LOS
-     * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PRErequisito: La
-     * velocidad debe de estar entre 0 y 100 POSTrequisito: La velocidad máxima
-     * va a ser 8 metros
+     * METROS QUE PUEDE RECORRER, MEDIANTE UNA REGLA DE 3 PREREESCRITO: 
+     * LA VELOCIDAD DEBE DE ESTAR ENTRE 0 Y 100 POSTREESCRITO
+     * LA VELOCIDAD MÁXIMA VA A SER 8 METROS
      *
      * @param velocidad equivalente a la velocidad de nuestro zombie
-     * @return v1, resultado de la regla de 3
+     * @return v1, resultado de la regla de 3 calculada
      */
     public static Byte desplazamiento(Byte velocidad) {
         byte v1;
@@ -56,22 +55,36 @@ public class FuncionesFIJA {
         return "Podemos utilizar un núumero total de " + p1 + " piedras";
     }
 
+    /**
+     * INTRODUCE UNA ACCIÓN Y DEVUELVE UNA CONSECUENCIA
+     *
+     * @param turno valor del iterador es el que indica el turno del juego
+     * @param accion es la decision que se toma en cada turno
+     * @return devuelve la consecuencia de tomar la acción
+     */
     public static String accionReaccion(Byte turno, String accion) {
 
-        if (accion.equalsIgnoreCase("alianza y cogen extintores")) {
+        if (turno == 4) {
+            return "Nos hemos aliado con AJEA";
         }
-        return "Nos hemos aliado con AJEA, y hemos cogido extintores";
+        if (turno == 5) {
+            return " Cabrón ";
+        }
+        if (turno == 6) {
+            return " Que me han tirado una piedra en la cabeza ";
+        }
+        return "";
     }
 
     /**
-     * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y EL
+     * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE Y DEL
      * ATACADO, SIMULANDO UN COMBATE ENTRE ELLOS Y COMPROBANDO CUAL VENCERÍA
      *
      * @param natacado nombre de atacado
      * @param vatacado velocidad del atacado
      * @param fatacado fuerza del atacado
-     * @return natacante+natacado+op. Devuelve el nombre de atacante/atacado y
-     * la vida que le ha restado el uno al otro.
+     * @return natacante + natacado + op. Devuelve el nombre del atacante/atacado 
+     * y la vida que le ha restado el uno al otro
      */
     public static String combate(String natacado, Byte vatacado, Byte fatacado) {
 

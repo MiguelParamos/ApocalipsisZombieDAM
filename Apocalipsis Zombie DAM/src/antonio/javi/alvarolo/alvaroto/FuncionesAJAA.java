@@ -21,7 +21,6 @@ public class FuncionesAJAA {
     public static byte fuerza =25 ;// fuerza del personaje de 0 a 100
     public static byte intuición =25 ;// intuicion del personaje de 0 a 100
     public static byte percepción =75 ;// percepcion del personaje de 0 a 100
-    public static byte vida=100;// vida del personaje.
     
     /**
      * Comprobamos que la suma total de los atributos es exactamente 200, devuelve un booleano.
@@ -80,9 +79,6 @@ public class FuncionesAJAA {
         }
         if (turno==4&& accion.equalsIgnoreCase("vibra el teléfono")){
             return "Decir a Abascal, algo viene por la derecha, y cojo el telefono";
-        } 
-        if (turno==5&& accion.equalsIgnoreCase("Oigo un fuerte ruido abajo")){
-            return "huyo en sentido contrario al ruido, y busco una salida alternativa";
         } 
         return "";
     }

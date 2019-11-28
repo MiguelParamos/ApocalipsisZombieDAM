@@ -64,33 +64,28 @@ public class FuncionesHSRK {
 
     }
     public static String accionReaccion (byte turno, String accion){
-        if (turno ==2) {
-            if (accion.equals ("preguntar que esta pasando")){
-                return "nadie dice nada";
-            }
-        }else if (turno == 3){
-            if (accion.equals ("amenazar a Aitor Tilla")){
-                return "Aceptamos la coalición";
-            }
-        }else if (turno == 4){
-            if (accion.equals ("preguntar telefono")){
-                return "Le preguntamos a Aitor Tilla que hay en su teléfono.";
-            }
+
+        switch (turno) {
+            case 2:
+                if (accion.equals ("preguntar que esta pasando")){
+                    return "nadie dice nada";
+                }   break;
+            case 3:
+                if (accion.equals ("amenazar a Aitor Tilla")){
+                    return "Aceptamos la coalición";
+                }   break;
+            case 4:
+                if (accion.equals ("preguntar telefono")){
+                    return "Le preguntamos a Aitor Tilla que hay en su teléfono.";
+                }   break;
+            default:
+                break;
         }
         
         return null;
            
     }
-    /**
-     * Esta función valora la posibilidad de robarle el teléfono a uno de los personajes, comparando la velocidad y la fuerza de ambos.
-     * 
-     * @param nombre_Atracar personaje al que atacamos
-     * @param mi_vel mi velocidad
-     * @param su_vel su velocidad
-     * @param mi_fuerza mi fuerza
-     * @param su_fuerza su fuerza
-     * @return Devuelve si finalmente logramos quitarle el objeto
-     */
+    
     public static String robarObjeto(String nombre_Atracar, byte mi_vel, byte su_vel, byte mi_fuerza, byte su_fuerza){
         if(mi_vel >= su_vel && mi_fuerza >= su_fuerza){
             return "Le quito el objeto a Aitor Torilla";
