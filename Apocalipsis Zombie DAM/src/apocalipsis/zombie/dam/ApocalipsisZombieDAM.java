@@ -66,7 +66,7 @@ public class ApocalipsisZombieDAM {
         System.out.println(imprimirTurno(turno,historia));
         
         //TURNO 4
-        turno++; 
+        turno++;
         historia="Aitor Tilla nota que le vibra el teléfono\n-----------------------\n";
         historia+=FuncionesFCMJ.nombre+": Sale corriendo. recorre "+FuncionesFIJA.desplazamiento(FuncionesFCMJ.velocidad)+" metros.  Están en la puerta del aula\n";
         historia+=FuncionesHSRK.nombre+": está confuso. Pregunta a Aitor Tilla qué mira en su teléfono. "+FuncionesHSRK.accionReaccion(turno,"preguntar telefono")+"\n";
@@ -81,8 +81,31 @@ public class ApocalipsisZombieDAM {
         historia="Luis Alberto y AJEA ven como de repente las hojas de la puerta exterior de cenec,\n"
                 + "se abren de golpe, y entran dos tìpos con pinta rara. \n"
                 + "Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.\n-----------------------\n";
-    System.out.println(imprimirTurno(turno,historia));
-
+        historia+=FuncionesFCMJ.nombre+": cogen extintor y esperan a los que están en el aula. "+FuncionesFCMJ.accionReaccion(turno,"Heusequio oye un ruido muy fuerte abajo. Aitor Tilla también lo oye.")+"\n";
+        historia+=FuncionesHSRK.nombre+": intentan quitar el teléfono a Aitor Tilla. "+FuncionesHSRK.robarObjeto(FuncionesAJAA.nombre,FuncionesHSRK.velocidad, FuncionesAJAA.velocidad, FuncionesHSRK.fuerza, FuncionesAJAA.fuerza)+"\n";
+        historia+=FuncionesAJEA.nombre+": Le arrean con el extintor al que acaba de entrar. "+FuncionesAJEA.accionReaccion(turno,"Le pegamos con el extintor en toda la cabeza")+"\n";
+        historia+=FuncionesFIJA.nombre+": Le dan una pedrada al otro que entró."+FuncionesFIJA.accionReaccion(turno,"alianza y cogen extintores")+"\n";
+        historia+=FuncionesAJAA.nombre+":Se asusta del ruido, y buscan otra salida. "+FuncionesAJAA.accionReaccion(turno,"Oigo un fuerte ruido abajo")+" Sabes que todos los balcones están cerrados, y la única salida es la puerta principal.\n";
+        
+        System.out.println(imprimirTurno(turno,historia));
+    
+        //TURNO 6
+        turno++;
+        historia="La situación sigue siendo confusa para todos.";
+        historia+=FuncionesFCMJ.nombre+": Ven corriendo a Abascal y Aitor Tilla hacia ellos. Les cortan el paso. "+FuncionesFCMJ.accionReaccion(turno,"corto el paso a los que vienen")+"\n"; //Respuesta: Veo venir a los dos y les corto el paso
+        historia+=FuncionesHSRK.nombre+": Salen corriendo detrás de Aitor Tilla. "+FuncionesFIJA.desplazamiento(FuncionesHSRK.velocidad)+" metros hasta las útlimas filas del aula.\n";
+        historia+=FuncionesAJEA.nombre+": Salen corriendo hacia calle comedias. "+FuncionesFIJA.desplazamiento(FuncionesAJEA.velocidad)+" metros hasta la puerta del ONeill bar.\n";
+        historia+=FuncionesFIJA.nombre+": Le preguntan al herido qué pasa."+FuncionesFIJA.accionReaccion(turno,"preguntan que pasa")+"\n"; //Respuesta: "El de la pedrada responde: "Que me has dado una pedrada"
+        historia+=FuncionesAJAA.nombre+":Pasan de todo y salen corriendo para abajo. Recorren "+FuncionesFIJA.desplazamiento(FuncionesAJAA.velocidad)+" metros hasta el final del aula.\n";
+        
+        System.out.println(imprimirTurno(turno,historia));
+        
+        //TURNO 7
+        turno++;
+        historia="Luis Alberto ve entrar por la puerta, lo que parece un zombie, detrás del ruido. Heusequio y Abascal oyen mucho ruido abajo. Aitor Tilla distingue golpes e insultos.";
+        
+        System.out.println(imprimirTurno(turno,historia));
+        
     }
     
     /**
