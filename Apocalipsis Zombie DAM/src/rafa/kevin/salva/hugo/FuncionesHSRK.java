@@ -64,18 +64,22 @@ public class FuncionesHSRK {
 
     }
     public static String accionReaccion (byte turno, String accion){
-        if (turno ==2) {
-            if (accion.equals ("preguntar que esta pasando")){
-                return "nadie dice nada";
-            }
-        }else if (turno == 3){
-            if (accion.equals ("amenazar a Aitor Tilla")){
-                return "Aceptamos la coalición";
-            }
-        }else if (turno == 4){
-            if (accion.equals ("preguntar telefono")){
-                return "Le preguntamos a Aitor Tilla que hay en su teléfono.";
-            }
+
+        switch (turno) {
+            case 2:
+                if (accion.equals ("preguntar que esta pasando")){
+                    return "nadie dice nada";
+                }   break;
+            case 3:
+                if (accion.equals ("amenazar a Aitor Tilla")){
+                    return "Aceptamos la coalición";
+                }   break;
+            case 4:
+                if (accion.equals ("preguntar telefono")){
+                    return "Le preguntamos a Aitor Tilla que hay en su teléfono.";
+                }   break;
+            default:
+                break;
         }
         
         return null;
