@@ -107,14 +107,21 @@ public class FuncionesFIJA {
         return nAtacante + " ataca a " + nAtacado + " y le quita " + (restaFuerza * 0.8) + " puntos de vida.";
     }
 
+    /**
+     * ESTA FUNCIÓN DEVUELVE UN STRING CON LA ACCIÓN DE LANZAR UNA PIEDRA 
+     * Y DEVUELVE LA RESPUESTA DE UNA PERSONA O UNA ACCIÓN
+     * 
+     * @param nombre es el nombre del personaje
+     * @param fatacado es la fuerza del personaje
+     * @return Devuelve un String con los mensajes según la acción
+     */
     public static String pegarPedrada(String nombre, Byte fatacado) {
         byte fuerza = (byte) (FuncionesFIJA.fuerza);
         if (fuerza >= fatacado) {
             return "Le pega una pedrada y grita: CABRÓN!";
         } else {
             return "Fallo y corro cual putilla";
-
         }
-
     }
+    
 }
