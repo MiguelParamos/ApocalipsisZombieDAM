@@ -66,6 +66,7 @@ public class ApocalipsisZombieDAM {
         System.out.println(imprimirTurno(turno,historia));
         
         //TURNO 4
+        turno++;
         historia="Aitor Tilla nota que le vibra el teléfono\n-----------------------\n";
         historia+=FuncionesFCMJ.nombre+": Sale corriendo. recorre "+FuncionesFIJA.desplazamiento(FuncionesFCMJ.velocidad)+" metros.  Están en la puerta del aula\n";
         historia+=FuncionesHSRK.nombre+": está confuso. Pregunta a Aitor Tilla qué mira en su teléfono. "+FuncionesHSRK.accionReaccion(turno,"preguntar telefono")+"\n";
