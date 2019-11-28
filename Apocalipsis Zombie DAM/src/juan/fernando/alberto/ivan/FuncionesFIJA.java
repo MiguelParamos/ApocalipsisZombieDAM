@@ -80,7 +80,7 @@ public class FuncionesFIJA {
      /**
      * ESTA FUNCIÓN PIDE EL NOMBRE, LA VELOCIDAD Y LA FUERZA DEL ATACANTE 
      * Y DEL ATACADO, SIMULANDO UN COMBATE ENTRE ELLOS Y REALIZA 
-     * LOS CÁLCULOS REALIZADOS POR EL COMBATE DE PERSONAJES
+     * LOS CÁLCULOS REALIZADOS POR EL COMBATE DE LOS PERSONAJES
      *
      * @param nAtacante es el nombre del personaje que ataca
      * @param nAtacado es el nombre del que es atacado

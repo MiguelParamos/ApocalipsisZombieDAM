@@ -21,7 +21,7 @@ public class FuncionesAJAA {
     public static byte fuerza =25 ;// fuerza del personaje de 0 a 100
     public static byte intuición =25 ;// intuicion del personaje de 0 a 100
     public static byte percepción =75 ;// percepcion del personaje de 0 a 100
-    
+    public static byte vida=100;
     /**
      * Comprobamos que la suma total de los atributos es exactamente 200, devuelve un booleano.
      * @param velocidad velocidad del personaje
