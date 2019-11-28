@@ -21,7 +21,7 @@ public class FuncionesAJEA {
     public static byte velocidad = 60;//velocidad 0-100 jugador
     public static byte fuerza = 80;//fuerza 0-100 jugador
     public static byte intuicion = 40;//intuicion 0-100 jugador
-    public static byte percepcion = 20;//percepcion 0-100 jugador
+    public static byte percepcion = 20;//percepcion 0-100 jugador    EL 20
     public static byte vida = 100;//vida 0-100 jugador
 
     /**
@@ -126,25 +126,21 @@ public class FuncionesAJEA {
 
         String resultado = "";
         Random aleatorio = new Random();
-        int rand;
+        int rand, contador;
 
         if (percepcion < 30) {
-            rand = aleatorio.nextInt(4);
 
-            return resultado = items[rand];
-
+            contador = 1;
         } else if (percepcion >= 30 && percepcion <= 70) {
+            contador = 2;
 
-            for (int i = 0; i < 2; i++) {
-                rand = aleatorio.nextInt(4);
-                resultado = resultado + items[rand]+"+";
-            }
-            return resultado;
+        } else {
+            contador = 3;
         }
 
-        for (int i = 0; i < 3; i++) {
-            rand = aleatorio.nextInt(4);
-            resultado = resultado + items[rand]+"+";
+        for (int i = 0; i < contador; i++) {
+            rand = aleatorio.nextInt(items.length);
+            resultado = resultado + items[rand] + "+";
         }
         return resultado;
     }
