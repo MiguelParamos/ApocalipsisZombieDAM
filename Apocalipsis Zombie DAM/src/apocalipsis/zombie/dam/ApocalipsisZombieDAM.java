@@ -107,9 +107,28 @@ public class ApocalipsisZombieDAM {
         historia+=FuncionesFIJA.nombre+": Atacan al zombie con el extintor. "+FuncionesAJEA.combate(FuncionesFIJA.nombre,"Zombie Amelio",FuncionesFIJA.velocidad, (byte)13, (byte)(FuncionesFIJA.fuerza+20),(byte)90)+"\n";
         byte vidaZombieAmelio=80;
         historia+=FuncionesAJEA.nombre+": Siguen corriendo hacia calle comedias. "+FuncionesFIJA.desplazamiento(FuncionesAJEA.velocidad)+" metros, entrais en el supercaro, y no hay un alma dentro. Ni siquiera el dependiente está.\n";
-        historia+=FuncionesAJAA.nombre+": Cogen una torre, e intentan atacar a Heusequio."+ FuncionesAJEA.combate(FuncionesAJAA.nombre,FuncionesFCMJ.nombre,FuncionesAJAA.velocidad,FuncionesFCMJ.velocidad,(byte)(FuncionesAJAA.fuerza+10),(byte)(FuncionesFCMJ.fuerza+20));
-        //FuncionesFCMJ.vi
+        historia+=FuncionesAJAA.nombre+": Cogen una torre, e intentan atacar a Heusequio."+ FuncionesAJEA.combate(FuncionesAJAA.nombre,FuncionesFCMJ.nombre,FuncionesAJAA.velocidad,FuncionesFCMJ.velocidad,(byte)(FuncionesAJAA.fuerza+10),(byte)(FuncionesFCMJ.fuerza+20))+"\n";
+        historia+=FuncionesHSRK.nombre+": Intentan agredir a Aitor Tilla."+ FuncionesAJEA.combate(FuncionesHSRK.nombre,FuncionesAJAA.nombre,FuncionesHSRK.velocidad,FuncionesAJAA.velocidad,(byte)(FuncionesHSRK.fuerza),(byte)(FuncionesAJAA.fuerza+10))+"\n";
+        historia+=FuncionesFCMJ.nombre+": Intentan agredir a Aitor Tilla."+FuncionesAJEA.combate(FuncionesFCMJ.nombre,FuncionesAJAA.nombre,FuncionesFCMJ.velocidad,FuncionesAJAA.velocidad,(byte)(FuncionesFCMJ.fuerza+20),(byte)(FuncionesAJAA.fuerza+10))+"\n";
         System.out.println(imprimirTurno(turno,historia));
+     
+        //Turno 8
+        turno++;
+        historia="AJEA encuentra sospechoso que el supercaro esté vacío y abierto.\n";
+        historia+="Amelio el Zombie Ataca a Luis Alberto. "+FuncionesAJEA.combate("Zombie Amelio",FuncionesFIJA.nombre, (byte)13, FuncionesFIJA.velocidad,(byte)90,(byte)(FuncionesFIJA.fuerza+20))+"\n";
+        String[] itemsSupercaro={"Barritas energéticas", "Ensaladas","Bolsas de patatas","Caramelos"};
+        //historia+=FuncionesAJEA.nombre+" Cogen lo que pueden del supercaro. Consiguen: "+FuncionesAJEA.buscar(FuncionesAJEA.percepcion,itemsSupercaro)+"\n"; //Devuelve un string con los nombres de los objetos que encuentran: Si tienen menos de 30 de percepción, encuentran uno aleatorio entre los que hay en el array. Si tienen entre 30 y 70, consiguen 2 aleatorios, si hay más de 70, consiguen 3.
+        historia+=FuncionesFIJA.nombre+": Escapan del zombie y tiran para calle comedias. Recorren "+FuncionesFIJA.desplazamiento(FuncionesFIJA.velocidad)+" metros. llegan cerca del Oneill Bar.\n";
+        historia+=FuncionesFCMJ.nombre+": Ven la futilidad de su violencia, y bajan para abajo. Recorren "+FuncionesFIJA.desplazamiento(FuncionesFCMJ.velocidad)+" metros. Llegan a la primera planta.\n";
+        historia+=FuncionesAJAA.nombre+": Ven la futilidad de su violencia, y bajan para abajo. Recorren "+FuncionesFIJA.desplazamiento(FuncionesAJAA.velocidad)+" metros. Llegan a la primera planta.\n";
+        historia+=FuncionesHSRK.nombre+": Ven la futilidad de su violencia, y bajan para abajo. Recorren "+FuncionesFIJA.desplazamiento(FuncionesHSRK.velocidad)+" metros. Llegan a la primera planta.\n";
+        System.out.println(imprimirTurno(turno,historia));
+        
+        //Turno 9
+        turno++;
+        historia="Heusequio y Abascal ven a alguien con pinta rara acercarse \na ellos lentamente. Aitor Tilla se da cuenta de que es un zombie.";
+        System.out.println(imprimirTurno(turno,historia));
+        
         
     }
     

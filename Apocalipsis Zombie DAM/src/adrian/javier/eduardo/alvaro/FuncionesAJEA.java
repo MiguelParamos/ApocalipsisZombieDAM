@@ -91,11 +91,11 @@ public class FuncionesAJEA {
         }
         if (restaVel <= 0 && restaVel >= -30) {
 
-            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + restaFuer / 2 + " de vida";
+            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer>0?0:-restaFuer) / 2 + " de vida";
 
         }
 
-        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + restaFuer + " de vida";
+        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " +  (restaFuer>0?0:-restaFuer) + " de vida";
 
     }
 
