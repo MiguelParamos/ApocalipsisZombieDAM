@@ -98,7 +98,7 @@ public class FuncionesFIJA {
         return FuncionesFIJA.nombre + " ha atacado a " + natacado + " y le ha restado " + op + " puntos de vida.";
     }
 
-    public static String pegarPedrada(String nombre_ataque, Byte fatacado) {
+    public static String pegarPedrada(String nombre, Byte fatacado) {
         byte fuerza = (byte) (FuncionesFIJA.fuerza);
         if (fuerza >= fatacado) {
             return "Le pega una pedrada y grita: CABRÓN!";
