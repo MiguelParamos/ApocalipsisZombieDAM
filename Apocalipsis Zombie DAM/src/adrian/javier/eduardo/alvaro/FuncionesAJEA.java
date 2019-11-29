@@ -121,24 +121,29 @@ public class FuncionesAJEA {
         }
         return "";
     }
-
+/**
+ * Esta funcion se encarga de dar al personaje una serie de objetos provenientes de un array y dependiendo de su percepcion recibe mas o menos
+ * @param percepcion La percepcion del personaje que determina la cantidad de objetos que recibe del Array items.
+ * @param items Un array de tamaño cualquiera,que contiene los objetos que puede recibir el personaje
+ * @return Se devuelve un String que tiene concatenado en si mismo varios(que son los objetos dentro del array items)
+ */
     public static String buscar(byte percepcion, String[] items) {
 
         String resultado = "";
-        Random aleatorio = new Random();
+        Random aleatorio = new Random();//Es necesario una varible aleatoria para dar un objeto aleatorio al personaje
         int rand, contador;
 
-        if (percepcion < 30) {
+        if (percepcion < 30) {//Para percepcion menor<30 se recibe un obeto del array
 
             contador = 1;
-        } else if (percepcion >= 30 && percepcion <= 70) {
+        } else if (percepcion >= 30 && percepcion <= 70) { //Para percepcion entre 30 y 70 se reciben dos objetos
             contador = 2;
 
-        } else {
+        } else {//Si la percepcion es mayor a 70 se reciben tres objetos
             contador = 3;
         }
 
-        for (int i = 0; i < contador; i++) {
+        for (int i = 0; i < contador; i++) {//Este bucle se vale de una variable random para en cada iteracion del mismo, dote al personaje de un objeto distinto.
             rand = aleatorio.nextInt(items.length);
             resultado = resultado + items[rand] + "+";
         }
