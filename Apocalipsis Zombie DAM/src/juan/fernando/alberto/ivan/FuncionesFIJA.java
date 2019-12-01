@@ -93,18 +93,21 @@ public class FuncionesFIJA {
     public static String combate(String nAtacante, String nAtacado, byte vAtacante, byte vAtacado, byte fAtacante, byte fAtacado) {
 
         byte restaVelocidad = (byte) (vAtacante - vAtacado);
-        byte restaFuerza = (byte) (Math.abs(fAtacante - fAtacado));
-        
+        byte restaFuerza = (byte) ((fAtacante - fAtacado) > 0 ? (fAtacante - fAtacado) : (byte) 0);
+
         if (restaVelocidad > 30) {
             return nAtacante + " ataca a " + nAtacado + " y le quita " + restaFuerza + " puntos de vida.";
         }
+
         if (restaVelocidad < 30 && restaVelocidad > 0) {
-            return nAtacante + " ataca a " + nAtacado + " y le quita " + (restaFuerza / 2) + " puntos de vida.";
+            return nAtacante + " ataca a " + nAtacado + " y le quita " + restaFuerza / 2 + " puntos de vida.";
         }
+
         if (restaVelocidad <= 0 && restaVelocidad >= -30) {
-            return nAtacante + " ataca a " + nAtacado + " y le quita " + (restaFuerza / 3) + " puntos de vida.";
+            return nAtacado + " ataca a " + nAtacante + " y le quita " + (restaFuerza > 0 ? 0 : -restaFuerza) / 2 + " puntos de vida.";
         }
-        return nAtacante + " ataca a " + nAtacado + " y le quita " + (restaFuerza * 0.8) + " puntos de vida.";
+
+        return nAtacado + " ataca a " + nAtacante + " y le quita " + (restaFuerza > 0 ? 0 : -restaFuerza) + " puntos de vida.";
     }
 
     /**
