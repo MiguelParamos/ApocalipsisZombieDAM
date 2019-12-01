@@ -5,6 +5,8 @@
  */
 package adrian.javier.eduardo.alvaro;
 
+import java.util.Random;
+
 /**
  * Aqui se definen los puntos repartidos al personaje.
  *
@@ -19,7 +21,7 @@ public class FuncionesAJEA {
     public static byte velocidad = 60;//velocidad 0-100 jugador
     public static byte fuerza = 80;//fuerza 0-100 jugador
     public static byte intuicion = 40;//intuicion 0-100 jugador
-    public static byte percepcion = 20;//percepcion 0-100 jugador
+    public static byte percepcion = 20;//percepcion 0-100 jugador    EL 20
     public static byte vida = 100;//vida 0-100 jugador
 
     /**
@@ -62,7 +64,6 @@ public class FuncionesAJEA {
      * @param fuerzaAtacado la fuerza del que es atacado
      * @return devuelve un string con los resultados del combate
      */
-
     /**
      * La funcion realiza los calculos relacionados con el combate
      *
@@ -78,7 +79,7 @@ public class FuncionesAJEA {
 
         byte restaVel = (byte) (velocidadAtacante - velocidadAtacado);
 
-        byte restaFuer = (byte)((fuerzaAtacante - fuerzaAtacado)>0?(fuerzaAtacante - fuerzaAtacado):(byte)0);
+        byte restaFuer = (byte) ((fuerzaAtacante - fuerzaAtacado) > 0 ? (fuerzaAtacante - fuerzaAtacado) : (byte) 0);
 
         if (restaVel > 30) {
 
@@ -91,31 +92,28 @@ public class FuncionesAJEA {
         }
         if (restaVel <= 0 && restaVel >= -30) {
 
-            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer>0?0:-restaFuer) / 2 + " de vida";
+            return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer > 0 ? 0 : -restaFuer) / 2 + " de vida";
 
         }
 
-        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " +  (restaFuer>0?0:-restaFuer) + " de vida";
+        return nombreAtacado + " ataca a " + nombreAtacante + " y le quita: " + (restaFuer > 0 ? 0 : -restaFuer) + " de vida";
 
     }
 
-
-
-/**
- * Se introduce una acción y se devuelve la consecuencia del turno
- *
- * @param turno valor del iterador referido al turno de juego.
- * @param accion es la decision que se toma en cada turno.
- * @return Devuelve lo que pasa al tomar la acción.
- */
-public static String accionReaccion(byte turno, String accion) {
+    /**
+     * Se introduce una acción y se devuelve la consecuencia del turno
+     *
+     * @param turno valor del iterador referido al turno de juego.
+     * @param accion es la decision que se toma en cada turno.
+     * @return Devuelve lo que pasa al tomar la acción.
+     */
+    public static String accionReaccion(byte turno, String accion) {
         if (turno == 3) {
             if (accion.equals("intentan entrar en secretaria")) {
                 return "No puedo entrar. Está cerrado";
 
             }
-        }
-        else if (turno == 4) {
+        } else if (turno == 4) {
             if (accion.equals("alianza y cogen extintores")) {
                 return "Piden a luis alberto trabajar juntos y cogen extintores";
 
@@ -123,7 +121,33 @@ public static String accionReaccion(byte turno, String accion) {
         }
         return "";
     }
+/**
+ * Esta funcion se encarga de dar al personaje una serie de objetos provenientes de un array y dependiendo de su percepcion recibe mas o menos
+ * @param percepcion La percepcion del personaje que determina la cantidad de objetos que recibe del Array items.
+ * @param items Un array de tamaño cualquiera,que contiene los objetos que puede recibir el personaje
+ * @return Se devuelve un String que tiene concatenado en si mismo varios(que son los objetos dentro del array items)
+ */
+    public static String buscar(byte percepcion, String[] items) {
 
+        String resultado = "";
+        Random aleatorio = new Random();//Es necesario una varible aleatoria para dar un objeto aleatorio al personaje
+        int rand, contador;
+
+        if (percepcion < 30) {//Para percepcion menor<30 se recibe un obeto del array
+
+            contador = 1;
+        } else if (percepcion >= 30 && percepcion <= 70) { //Para percepcion entre 30 y 70 se reciben dos objetos
+            contador = 2;
+
+        } else {//Si la percepcion es mayor a 70 se reciben tres objetos
+            contador = 3;
+        }
+
+        for (int i = 0; i < contador; i++) {//Este bucle se vale de una variable random para en cada iteracion del mismo, dote al personaje de un objeto distinto.
+            rand = aleatorio.nextInt(items.length);
+            resultado = resultado + items[rand] + "+";
+        }
+        return resultado;
+    }
 
 }
-
